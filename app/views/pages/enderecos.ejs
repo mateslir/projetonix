@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereços</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header id="Header_home">
+        <h1 id="Logo">
+          <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
+          
+        </h1>
+      
+        <div class="pesquisa">
+      
+          <input type="text" placeholder="Busque aqui.">
+          <button type="button">
+            <img src="imagens/Group 2 (1).png" alt="Psquisa">
+          </button>
+        </div>
+      
+        <div class="menu">
+          <img id="menuBotao" src="imagens/hamburguer.png" onclick="changeImage()">
+          
+         
+          <div class="submenu">
+            <ul>
+              <li><a class="tamanho" id="cart-icon"><i class='bx bx-cart' id="cart-icon" data-quantitiy="0"></i>Carrinho</a></li>
+              <li><a href="/perfil"><img src="imagens/Perfil Hamburguer.png">Perfil</a></li>
+              <li><a href="/configuracao"><img src="imagens/gearw 1.png">Config.</a></li>
+            </ul>
+          </div>
+              <!--cart-->
+    <div class="cart">
+        <h2 class="cart-title">Seu carrinho</h2>
+        <!--content-->
+        <div class="cart-content">
+        
+        </div>
+        <!--total-->
+        <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">R$0</div>
+      </div>
+      <!--buy button-->
+      <button type="button" class="btn-buy">Compre Agora</button>
+      <!--Close Cart-->
+      <i class="bx bx-x" id="close-cart"></i>
+      </div>
+        </header>
+
+        <button id="back-button" onclick="goBack()"><a href="/configuracao"></a><img src="imagens/Arrow 12.png" alt=""></button>
+
+        <main>
+            <div id="header">
+                <h2>Vender na Nix</h2>
+              </div>
+
+            <div class="button-container">
+            <button id="botão-adcionar"> <a href="/formendereco"> <img src="imagens/+.png" alt=""> Adicionar endereço</a></button>
+        </main>
+
+        <footer>
+
+            <div class="rodinha">
+        
+           
+              <nav>
+             
+                <ul>
+                    <h3 class="subtitulo-rodape">Atendimento ao cliente</h3>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Central de Ajuda
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                           Como comprar
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Métodos de Pagamentos
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Garantia
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Devolução e Reembolso
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="#" class="cor-texto-rodape">
+                            Fale Conosco
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Ouvidoria
+                        </a>
+                    </li>
+        
+                </ul>
+        
+            </nav>
+        
+          
+            <nav>
+              
+                <ul>
+                    <h3><br>Siga-nos</h3>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Instagram
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Twitter
+                        </a>
+                    </li>
+        
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Facebook
+                        </a>
+                    </li>
+        
+                </ul>
+            </nav>
+        
+          
+            <nav>
+              
+        
+                <ul>
+                    <h3><br>Sobre a Nix</h3>
+                    <li class="lista-rodape">
+                        <a href="" class="cor-texto-rodape">
+                            Sobre Nós
+                        </a>
+                    </li>
+                    <li class="lista-rodape">
+                        <a href=""class="cor-texto-rodape">
+                            Políticas NIX
+                        </a>
+                    </li>
+                    <li class="lista-rodape">
+                        <a href=""class="cor-texto-rodape">
+                            Políticas de Privacidade
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        
+            <ul>
+                <nav >
+                <h3>Pagamentos</h3>
+        
+                <div class="nini">
+        
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        <img src="imagens/visa.png">
+                    </a>
+                </li>
+        
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        <img src="imagens/mastercard.png">
+                    </a>
+                </li>
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        <img src="imagens/elo.png">
+                </li>
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        <img src="imagens/paypal.png">
+                    </a>
+                </li>
+                </div>
+              </nav>
+            </ul>
+            </div>
+            <div class="direito">
+            <p>© 2022 NIXwear.Todos os direitos reservados</p>
+            <p>País e região: Brasil</p>
+            </div>
+        
+        </footer>
+</body>
+</html>

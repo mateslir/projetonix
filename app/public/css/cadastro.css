@@ -1,0 +1,571 @@
+@media (max-width: 480px) {
+
+  .homecad {
+    width:30px;
+    position: relative;
+    left:15px;
+    top:15px;
+  }
+  
+  
+  
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+  
+  }
+  .roxo{
+    background-color:#3D348B ;
+  }
+  
+  input[type="email"], input[type="password"], input[type="text"]  {
+    width:180px;
+    padding: 5px;
+    border: 3px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    position: relative;
+    left: 53px;
+    font-size: 13px;
+    top: 625px ;
+  
+  }
+  
+  .enviar{
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 630px;
+    left: 85px;
+    font-size: 15px;
+  
+  }
+  
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    color:#3D348B;
+    position: relative;
+    top: 25px;
+  
+  }
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 20px;
+    position: relative;
+    box-sizing:border-box;
+    top: 80px;
+    width: 285px;
+    height:370px;
+    left: 93px;
+  }
+  
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 20px;
+    position: relative;
+    box-sizing:border-box;
+    top: 250px;
+    width: 285px;
+    height:275px;
+    left: 93px;
+  }
+  
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+  
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+  .Entrar{
+    position: relative;
+    top: 22px;
+    font-size: 15px;
+    left: px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+    text-align: center;
+  }
+  
+  .Entrar2{
+    position: relative;
+    top: 635px;
+    font-size: 18px;
+    
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+    text-align: center;
+  
+  }
+  
+   #lilas {
+    color:#BBBCEA;
+  }
+  .checkbox-label {
+
+    display: block;
+  
+    margin-bottom: 15px;
+  
+    display: flex;
+    color:#3D348B;
+  
+      justify-content: center;
+  
+      align-items: center;
+  
+      height: 55px;
+  
+      margin: 0;
+  
+      font-size: 15px;
+      font-family: 'Lexend';
+      font-style: normal;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+
+  .homecad {
+    width:75px;
+    position: relative;
+    left:15px;
+    top:15px;
+  }
+  
+  
+  
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+  
+  }
+  .roxo{
+    background-color:#3D348B ;
+  }
+  
+  input[type="email"], input[type="password"], input[type="text"]  {
+    width:180px;
+    padding: 5px;
+    border: 3px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    position: relative;
+    left: 53px;
+    font-size: 13px;
+    top: 625px ;
+  
+  }
+  
+  .enviar{
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 630px;
+    left: 85px;
+    font-size: 15px;
+  
+  }
+  
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    color:#3D348B;
+    position: relative;
+    top: 25px;
+  
+  }
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 20px;
+    position: relative;
+    box-sizing:border-box;
+    top:200px;
+    width: 295px;
+    height:380px;
+    left: 225px;
+  }
+  
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 20px;
+    position: relative;
+    box-sizing:border-box;
+    top: 250px;
+    width: 285px;
+    height:275px;
+    left: 228px;
+  }
+  
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+  
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+  .Entrar{
+    position: relative;
+    top: 25px;
+    font-size: 15px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+    text-align: center;
+  }
+  
+  .Entrar2{
+    position: relative;
+    top: 635px;
+    font-size: 18px;
+    
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+    text-align: center;
+  
+  }
+  
+   #lilas {
+    color:#BBBCEA;
+  }
+  .checkbox-label {
+
+    display: block;
+  
+    margin-bottom: 15px;
+  
+    display: flex;
+    color:#3D348B;
+  
+      justify-content: center;
+  
+      align-items: center;
+  
+      height: 55px;
+  
+      margin: 0;
+  
+      font-size: px;
+      font-family: 'Lexend';
+      font-style: normal;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 960px) {
+
+  .homecad {
+    width:50px;
+    position: relative;
+    left:15px;
+    top:15px;
+  }
+  
+  
+  
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+  
+  }
+  .roxo{
+    background-color:#3D348B ;
+  }
+  
+  input[type="email"], input[type="password"], input[type="text"]  {
+    width:280px;
+    padding: 5px;
+    border: 5px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    position: relative;
+    left: 53px;
+    font-size: 15px;
+    top: 650px ;
+  
+  }
+  
+  .enviar{
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 644px;
+    left: 120px;
+    font-size: 20px;
+  
+  }
+  
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 38px;
+    text-align: center;
+    color:#3D348B;
+    position: relative;
+    top: 40px;
+  
+  }
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing:border-box;
+    top: 80px;
+    width: 385px;
+    height:490px;
+    left: 180px;
+  }
+  
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing:border-box;
+    top: 120px;
+    width: 385px;
+    height:370px;
+    left: 275px;
+  }
+  
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+  
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+  .Entrar{
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    left: 80px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+    align-items: center;
+  }
+  
+  .Entrar2{
+    position: relative;
+    top: 650px;
+    font-size: 25px;
+    
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+    text-align: center;
+  
+  }
+  
+  
+   #lilas {
+    color:#BBBCEA;
+  }
+  .checkbox-label {
+
+    display: block;
+  
+    margin-bottom: 15px;
+  
+    display: flex;
+    color:#3D348B;
+  
+      justify-content: center;
+  
+      align-items: center;
+  
+      height: 55px;
+  
+      margin: 0;
+  
+      font-size: 20px;
+      font-family: 'Lexend';
+      font-style: normal;
+  }
+}
+
+@media (min-width: 961px), (min-width: 1025px) {
+
+  .homecad {
+    width:60px;
+    position: relative;
+    left:20px;
+    top:20px;
+  }
+  
+  
+  
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+  
+  }
+  .roxo{
+    background-color:#3D348B ;
+  }
+  
+  input[type="email"], input[type="password"], input[type="text"]  {
+    width:350px;
+    padding: 5px;
+    border: 5px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    position: relative;
+    left: 75px;
+    font-size: 20px;
+    top: 660px ;
+  
+  }
+  
+  .enviar{
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 660px;
+    left: 165px;
+    font-size: 25px;
+  
+  }
+  
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 38px;
+    text-align: center;
+    color:#3D348B;
+    position: relative;
+    top: 50px;
+  
+  }
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing:border-box;
+    top: 100px;
+    width: 485px;
+    height:590px;
+    left: 235px;
+  }
+  
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing:border-box;
+    top: 190px;
+    width: 485px;
+    height:410px;
+    left: 250px;
+  }
+  
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+  
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+  .Entrar{
+    position: relative;
+    top: 50px;
+    font-size: 25px;
+    left: 105px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+  
+  }
+  
+  .Entrar2{
+    position: relative;
+    top: 650px;
+    font-size: 30px;
+    
+    font-family: 'Lexend';
+    font-style: normal;
+    color:#3D348B;
+    text-align: center;
+  
+  }
+  
+   #lilas {
+    color:#BBBCEA;
+  }
+  .checkbox-label {
+
+    display: block;
+  
+    margin-bottom: 15px;
+  
+    display: flex;
+    color:#3D348B;
+  
+      justify-content: center;
+  
+      align-items: center;
+  
+      height: 130px;
+  
+      margin: 0;
+  
+      font-size: 23px;
+      font-family: 'Lexend';
+      font-style: normal;
+  }
+}

@@ -1,0 +1,14 @@
+.body{
+width:50%;
+align-items: center;
+margin-top:30%;
+margin-left:25%;
+}
+.pedido{
+    font-weight: 600;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3D348B;
+    position: relative;
+}

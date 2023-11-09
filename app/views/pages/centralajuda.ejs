@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Central de ajuda </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/centralajuda.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <header id="Header_home">
+        <h1 id="Logo">
+          <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
+          
+        </h1>
+      
+        <div class="pesquisa">
+      
+          <input type="text" placeholder="Busque aqui.">
+          <button type="button">
+            <img src="imagens/Group 2 (1).png" alt="Psquisa">
+          </button>
+        </div>
+      
+        <div class="menu">
+          <img id="menuBotao" src="imagens/hamburguer.png" onclick="changeImage()">
+          
+         
+          <div class="submenu">
+            <ul>
+              <li><a class="tamanho" id="cart-icon"><i class='bx bx-cart' id="cart-icon" data-quantitiy="0"></i>Carrinho</a></li>
+              <li><a href="/perfil"><img src="imagens/Perfil Hamburguer.png">Perfil</a></li>
+              <li><a href="/configuracao"><img src="imagens/gearw 1.png">Config.</a></li>
+            </ul>
+          </div>
+              <!--cart-->
+    <div class="cart">
+        <h2 class="cart-title">Seu carrinho</h2>
+        <!--content-->
+        <div class="cart-content">
+        
+        </div>
+        <!--total-->
+        <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">R$0</div>
+      </div>
+      <!--buy button-->
+      <button type="button" class="btn-buy">Compre Agora</button>
+      <!--Close Cart-->
+      <i class="bx bx-x" id="close-cart"></i>
+      </div>
+        </header>
+        <button id="back-button" onclick="goBack()"> <img src="imagens/Arrow 12.png" alt=""></button>
+
+    <div id="header">
+        <h2> Central de ajuda </h2>
+      </div>
+
+      
+
+      <main>
+        <p>Bem-vindo à Central de Ajuda da nossa loja de roupas! Estamos aqui para fornecer suporte e orientação em relação aos produtos, compras e quaisquer dúvidas que você possa ter. Nossa equipe dedicada está pronta para ajudar a tornar sua experiência de compra conosco agradável e sem complicações.</p>
+        <p>O objetivo da nossa Central de Ajuda é oferecer informações claras e abrangentes para atender às suas necessidades. Queremos garantir que você tenha acesso fácil a todas as informações relevantes, desde as especificações dos produtos até as políticas de troca e devolução, além de fornecer soluções para os problemas mais comuns enfrentados pelos nossos clientes.</p>
+
+        <div id="header">
+            <h2> Dúvidas comuns: </h2>
+          </div>
+    
+
+        <ol>
+            <li class="TIOL"> <a href=""> Como faço para fazer uma compra online em sua loja? </a> </li>
+            <li class="TIOL"> <a href=""> Quais são as opções de pagamento disponíveis? </a> </li>
+            <li class="TIOL"> <a href=""> Quanto tempo leva para a entrega dos produtos? </a> </li>
+            <li class="TIOL"> <a href=""> Posso acompanhar o status do meu pedido? </a> </li>
+            <li class="TIOL"> <a href=""> Quais são as políticas de troca e devolução? </a> </li>
+            <li class="TIOL"> <a href=""> Como posso entrar em contato com o serviço de atendimento ao cliente? </a> </li>
+            <li class="TIOL"> <a href=""> Vocês possuem um programa de fidelidade ou descontos especiais? </a> </li>
+
+         
+        </ol>
+
+        <p>Estas são apenas algumas das perguntas frequentes que abordaremos em nossa Central de Ajuda. Estamos aqui para garantir que você tenha todas as informações necessárias para fazer suas compras com confiança e aproveitar ao máximo a sua experiência conosco. Se você tiver outras dúvidas, sinta-se à vontade para explorar as seções relevantes da nossa Central de Ajuda ou entrar em contato com nossa equipe de suporte. Estamos ansiosos para ajudá-lo!</p>
+      </main>
+      <footer>
+
+        <div class="rodinha">
+    
+       
+          <nav>
+         
+            <ul>
+                <h3 class="subtitulo-rodape">Atendimento ao cliente</h3>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Central de Ajuda
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                       Como comprar
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Métodos de Pagamentos
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Garantia
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Devolução e Reembolso
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="#" class="cor-texto-rodape">
+                        Fale Conosco
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Ouvidoria
+                    </a>
+                </li>
+    
+            </ul>
+    
+        </nav>
+    
+      
+        <nav>
+          
+            <ul>
+                <h3><br>Siga-nos</h3>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Instagram
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Twitter
+                    </a>
+                </li>
+    
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Facebook
+                    </a>
+                </li>
+    
+            </ul>
+        </nav>
+    
+      
+        <nav>
+          
+    
+            <ul>
+                <h3><br>Sobre a Nix</h3>
+                <li class="lista-rodape">
+                    <a href="" class="cor-texto-rodape">
+                        Sobre Nós
+                    </a>
+                </li>
+                <li class="lista-rodape">
+                    <a href=""class="cor-texto-rodape">
+                        Políticas NIX
+                    </a>
+                </li>
+                <li class="lista-rodape">
+                    <a href=""class="cor-texto-rodape">
+                        Políticas de Privacidade
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <ul>
+            <nav >
+            <h3>Pagamentos</h3>
+    
+            <div class="nini">
+    
+            <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                    <img src="Nix Wear tcc/imagens/visa.png">
+                </a>
+            </li>
+    
+            <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                    <img src="Nix Wear tcc/imagens/mastercard.png">
+                </a>
+            </li>
+        </div>
+        <div class="nini">
+            <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                    <img src="Nix Wear tcc/imagens/elo.png">
+            </li>
+            <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                    <img src="Nix Wear tcc/imagens/paypal.png">
+                </a>
+            </li>
+            </div>
+          </nav>
+        </ul>
+        </div>
+        <div class="direito">
+        <p>© 2022 NIXwear.Todos os direitos reservados</p>
+        <p>País e região: Brasil</p>
+        </div>
+    
+    </footer>
+    
+      <script src="Nix Wear tcc/Script.js"></script>
+    
+    
+    </body>
+    </html>
+    
+
+
+
+</body>
+</html>

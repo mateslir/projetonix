@@ -1,0 +1,23 @@
+/* Estilos para os cabeçalhos */
+.destaques h2.titulo-priv {
+    background-color: #bbbcea; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilos para o conteúdo de texto */
+  #privtexto {
+    margin: 20px; /* Margem ao redor do conteúdo */
+    padding: 20px;
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilos para os subtítulos */
+  .subtitulo-priv h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

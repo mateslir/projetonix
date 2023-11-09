@@ -1,0 +1,58 @@
+/* Estilos para a seção principal */
+.config-42a {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  }
+  
+  .titulo-config-21b {
+    font-size: 28px;
+    color: #3D348B;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para cada categoria */
+  .categoria-7x3, .categoria-5r7, .categoria-2v1 {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .subtitulo-config-9y2, .subtitulo-config-3x8, .subtitulo-config-6q4 {
+    font-size: 20px;
+    color: #3D348B;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para os itens e links */
+  .ul-config-4c8, .ul-config-9z1, .ul-config-7w9 {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .item-config-1a5, .item-config-6k9, .item-config-0t7, .item-config-4y6, .item-config-8j5, .item-config-5a4 {
+    margin-bottom: 10px;
+  }
+  
+  .link-config-8b6, .link-config-7z2, .link-config-5p1, .link-config-2x8, .link-config-0p3, .link-config-1s6 {
+    color: #7678ED;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .link-config-8b6:hover, .link-config-7z2:hover, .link-config-5p1:hover, .link-config-2x8:hover, .link-config-0p3:hover, .link-config-1s6:hover {
+    text-decoration: underline;
+  }
+  
+  .link-excluir-3t1 {
+    color: #ED7676;
+  }
+  

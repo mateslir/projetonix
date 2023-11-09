@@ -1,0 +1,31 @@
+/* Estilo para o cabeçalho principal */
+#header {
+    background-color: #bbbcea; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 20px;
+    margin: 20px; /* Margem para afastar do topo da página */
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilo para o conteúdo principal */
+  main {
+    padding: 20px;
+    margin: 20px; /* Margem para afastar das bordas da página */
+  }
+  
+  /* Estilo para os títulos secundários */
+  #header h2 {
+    background-color: #bbbcea;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0; /* Margem acima e abaixo dos títulos secundários */
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilo para a lista de perguntas frequentes */
+  .TIOL {
+    margin: 10px 0; /* Margem entre os itens da lista */
+  }
+  

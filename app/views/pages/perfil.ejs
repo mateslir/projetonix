@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="js/perfil.js">
+    <link rel="stylesheet" href="js/Script.js">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+</head>
+<body id="Home">
+  
+    <header id="Header_home">
+      <h1 id="Logo">
+        <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
+        
+      </h1>
+    
+      <div class="pesquisa">
+    
+        <input type="text" placeholder="Busque aqui.">
+        <button type="button">
+          <img src="imagens/Group 2 (1).png" alt="Psquisa">
+        </button>
+      </div>
+    
+      <div class="menu">
+        <img id="menuBotao" src="imagens/hamburguer.png" onclick="changeImage()">
+
+        <div class="submenu">
+            <ul>
+              <li><a class="tamanho" id="cart-icon"><i class='bx bx-cart' id="cart-icon" data-quantitiy="0"></i>Carrinho</a></li>
+              <li><a href="/perfil"><img src="imagens/Perfil Hamburguer.png">Perfil</a></li>
+              <li><a href="/configuracao"><img src="imagens/gearw 1.png">Config.</a></li>
+            </ul>
+          </div>
+                        <!--cart-->
+    <div class="cart">
+      <h2 class="cart-title">Seu carrinho</h2>
+      <!--content-->
+      <div class="cart-content">
+      
+      </div>
+      <!--total-->
+      <div class="total">
+      <div class="total-title">Total</div>
+      <div class="total-price">R$0</div>
+    </div>
+    <!--buy button-->
+    <button type="button" class="btn-buy">Compre Agora</button>
+    <!--Close Cart-->
+  <i class="bx bx-x" id="close-cart"></i>
+    </div>
+        </header>
+        <a href=editarperfil><i class='bx bxs-edit' ></i></a>
+        <div class="usuari">
+        <img src="imagens/Group 9 (1).png"> 
+        <h1 ><%= autenticado.autenticado%></h1>
+        <h2>Descrição</h2>
+        </div>
+        <hr>
+        <main>
+          <div class="usuari">
+        <h1>Compre de novo</h1>
+      </div>
+        <div class="subvitrine">
+          <div class="produto">
+            <img src="imagens/roupa.jpeg" alt="Celular 1">
+            <h3>CALÇA JEANS COM OLHOS</h3>
+            <h4>69,99</h4>
+          </div>
+
+            <div class="produto">
+              <img src="imagens/roupa9.jpeg" alt="Celular 1">
+              <h3>BOLSA DA HELLO KITTY</h3>
+              <h4>19,99</h4>
+            </div>
+
+            <div class="produto">
+              <img src="imagens/roupa10.jpeg" alt="Celular 1">
+              <h3>MOLETOM DE CROCHE XADREZ</h3>
+              <h4>79,99</h4>
+            </div>
+
+            <div class="produto">
+              <img src="imagens/roupa11.jpeg" alt="Celular 1">
+              <h3>CROPPED PRETO DO ROCK</h3>
+              <h4>24,99</h4>
+            </div> 
+
+            <div class="produto">
+              <img src="imagens/roupa5.jpeg" alt="Celular 1">
+              <h3>MOLETOM DE OSSOS</h3>
+              <h4>59,99</h4>
+            </div>
+       <div class="produto">
+        <img src="imagens/roupa6.jpeg" alt="Celular 1">
+        <h3>BOINA COM BOTONS</h3>
+        <h4>19,99</h4>
+      </div>
+              </div>  
+              </main>
+     <script src="js/Script.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

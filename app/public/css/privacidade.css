@@ -1,0 +1,49 @@
+/* Estilos para os cabeçalhos */
+.destaques h2.titulo-priv {
+    background-color: #bbbcea; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilos para os subtítulos */
+  .subtitulo-priv h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para o conteúdo de texto */
+  #privtexto {
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  /* Estilos para listas e itens */
+  .lista-priv ul.lista-priv2 {
+    margin-left: 20px;
+  }
+  
+  /* Estilos para listas de itens */
+  .lista-priv2 li {
+    margin: 10px 0;
+  }
+  
+  /* Estilos para os cabeçalhos "Termos de Uso" */
+  .destaques h2.titulo-priv:last-of-type {
+    margin-top: 20px;
+    background-color: #bbbcea; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilos para os subtítulos de "Termos de Uso" */
+  .subtitulo-priv:last-of-type h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

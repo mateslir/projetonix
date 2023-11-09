@@ -1,0 +1,8060 @@
+@media (max-width: 480px) {
+
+  #Home {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #Header_home {
+    background-color: #3D348B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #Logo img {
+    height: 30px;
+    width: auto;
+  }
+
+  .pesquisa {
+    position: relative;
+  }
+
+  .pesquisa input {
+    border-radius: 20px;
+    padding: 8px 60px 8px 10px;
+    border: none;
+  }
+
+  .pesquisa button {
+    position: absolute;
+    top: 53%;
+    right: 4px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .pesquisa button img {
+    height: 20px;
+    width: auto;
+  }
+
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .cart{
+    position:fixed;
+    top:0;
+    right:-110%;
+    width:443px;
+    min-height:100vh;
+    padding: 20px;
+    background: whitesmoke;
+    box-shadow: -2px 0 4px hsl(0,4%,15% / 10%);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index:13;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .cart.active{
+    right:0;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .cart-title{
+    text-align: center;
+    font-size:1.5rem;
+    font-weight:600;
+    margin-top:2rem;
+    color:#3b378b
+  }
+  .total{
+    display:flex;
+    justify-content:flex-end;
+    margin-top: 1.5rem;
+    border-top: 2px solid #3D348B
+  }
+  .total-title{
+    font-size:1.2rem;
+    font-weight:600;
+    margin-top: 1rem;
+  }
+  .total-price{
+    font-size:1.075rem;
+    margin: 1rem 0 0 0.7rem;
+  }
+  .btn-buy{
+    display:flex;
+    justify-content: center;
+    margin:1.5rem auto 0 auto;
+    padding:12px 20px;
+    width: 50%;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    background: #3b378b;
+    color:#ffffff;
+    font-style: italic;
+    font-weight:600;
+    cursor: pointer;
+    font-size: 100%;
+  }
+  #close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color:#3b378b;
+    cursor: pointer;
+  }
+
+  .cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+  }
+  .cart-img{
+    width: 115px;
+    height:115px;
+    object-fit: contain;
+    object-position: center;
+    padding:5px;
+  }
+  .detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+  }
+  .cart-product-title{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+.cart-price{
+  font-weight: 500;
+}
+.cart-quantity{
+  border:1px solid #3b378b;
+  outline-color:#BBBCEA;
+  width:2.8rem;
+  text-align: center;
+  font-size:1rem;
+  border-radius:4px;
+}
+.cart-remove{
+  font-size:24px;
+ color:red;
+ cursor:pointer;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom:0px;
+  position: relative;
+  top:-50px;
+  color:#3D348B}
+.shop-content{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap:0.50rem;
+  align-items: center;
+  padding: 15px;
+}
+.product-box img{
+  width:100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 0.8rem;
+}
+.product-box:hover{
+  background:#3b378b ;
+  border:1px solid #BBBCEA;
+  box-shadow: 0 8px 32px hsl(0.75,0.82, 0.165, 1);
+  transition: 0.4 cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.product-box:hover .product-title,
+.product-box:hover .price{
+  color:white;
+}
+.product-box {
+  position: relative;
+  background:white;
+  padding: 12px;
+  border-radius: 10px;
+  border:2px solid #3b378b;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165,1);
+  top:-40px;
+}
+.product-title{
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom:1.25rem;
+  color:#3D348B;
+}
+.price{
+  font-weight: 700;
+  position: relative;
+  top:px;
+  color:#3D348B;
+}
+.add-cart{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #3D348B;
+  color:white;
+  padding:10px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.add-cart:hover {
+  background: white;
+  color: #3D348B
+}
+
+#cart-icon{
+  position: relative;
+  font-size: 16px;
+  margin-right: 5px;
+  cursor:pointer;
+ 
+}
+#cart-icon i{
+  position: relative;
+  font-size: 35px;
+  margin-right: 5px;
+  cursor:pointer;
+  right:1px;
+}
+#cart-icon[data-quantity="0"]::after {
+  contain:"";
+}
+#cart-icon[data-quantity]::after {
+  content: attr(data-quantity);
+  position:absolute;
+  top: 5px;
+  left:2px;
+  width: 20px;
+  height: 20px;
+  background:#BBBCEA;
+  border-radius: 50%;
+  color:white;
+  font-size: 12px;
+  font-weight: 500;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #3D348B;
+    min-width: 160px;
+    top: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -10px;
+    border-radius: 10px;
+
+
+  }
+
+  .submenu a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .submenu ul {
+    list-style-type: none;
+  }
+
+  .submenu a img {
+    margin-right: 8px;
+  }
+
+  .submenu a:hover {
+    background-color: #f1f1f1;
+  }
+
+  #menuBotao {
+    cursor: pointer;
+  }
+
+  .submenu.show {
+    display: block;
+  }
+
+  
+  .carousel {
+
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    top: 50px
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-color: 0 0 10px #3D348B;
+
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background-color: #3D348B;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+
+  .destaques {
+    text-align: center;
+  }
+
+  .recentes {
+
+
+    text-align: center;
+  }
+
+  .subtitulo-home {
+
+
+    color: #3D348B;
+
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    text-align: center;
+  }
+
+  .fundin {
+
+
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #90e0ef;
+
+
+    width: 157px;
+  }
+
+  .produto {
+
+
+    margin-bottom: 20px;
+  }
+
+  .preco {
+
+
+    background-color: #90e0ef;
+    width: 50%;
+
+
+    position: relative;
+    left: -25%;
+
+
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+
+  footer {
+    background-color: #E1ECDD;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .cor-texto-rodape {
+    color: #124559;
+    text-decoration: none;
+  }
+
+  .rodinha {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 400px;
+    justify-content: center;
+  }
+
+  .subtitulo-rodape {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+  .lista-rodape {
+    list-style-type: none;
+  }
+
+  .nini {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .direito p {
+    width: 350px;
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    left: 10%;
+  }
+
+
+  /*Cadastro e login */
+
+  .homecad {
+    width: 50px;
+    position: relative;
+    left: 40px;
+    top: 40px;
+  }
+
+
+
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+
+  }
+
+  .roxo {
+    background-color: #3D348B;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 350px;
+    padding: 5px;
+    border: 5px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    position: relative;
+    left: 25px;
+    font-size: 25px;
+    top: 680px;
+
+  }
+
+  .enviar {
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 685px;
+    left: 110px;
+    font-size: 30px;
+
+  }
+
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 38px;
+    text-align: center;
+    color: #3D348B;
+    position: relative;
+    top: 60px;
+
+  }
+
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 50px;
+    position: relative;
+    box-sizing: border-box;
+    top: 650px;
+    width: 985px;
+    height: 925px;
+    left: 200px;
+  }
+
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing: border-box;
+    top: 190px;
+    width: 400px;
+    height: 450px;
+    left: 45px;
+  }
+
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+
+  .Entrar {
+    position: relative;
+    top: 450px;
+    font-size: 50px;
+    left: 400px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #3D348B;
+
+  }
+
+  .Entrar2 {
+    position: relative;
+    top: 110px;
+    left: 5px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #BBBCEA;
+    font-size: 25px;
+    text-align: center;
+
+  }
+
+  #lilas {
+    color: #3D348B;
+  }
+
+  /*carrinho*/
+
+  .titulo-carr {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3D348B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .carrinho-produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    left: 15px;
+    top: 9px;
+  }
+
+  .imagem-produto {
+    margin-right: 20px;
+  }
+
+  .imagem-produto img {
+    width: 120px;
+    height: 166px;
+  }
+
+  #item-name {
+    color: #7678ED;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  #preco {
+    font-weight: bold;
+    color: #3D348B;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  #quantidade {
+    width: 20%;
+    border-radius: 5px;
+    border-color: #3D348B;
+
+  }
+
+  #botao-carrinho {
+    border-radius: 5px;
+    background-color: #7678ED;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+
+  .resumo {
+
+
+    background-color: #D6DBEC;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .total-titulo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #3D348B;
+  }
+
+  .total-valor {
+
+    margin-top: 10px;
+    color: #3D348B;
+    position: relative;
+    top: -5px;
+  }
+
+  .checkout-cta {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /*Finalização*/
+
+  .Imagemredondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 200px;
+  }
+
+  .Texto-finalização {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    color: #3d348b;
+    margin-top: 50px;
+    font-size: 28px;
+  }
+
+  /*configuraçao*/
+
+  #configuracao {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+
+  }
+
+  .config {
+    color: #3d348b;
+
+  }
+
+  #titulo-config {
+    text-align: center;
+
+  }
+
+  #subti-config {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    background-color: #bbbcea;
+    color: #3d348b;
+    padding: 11px;
+  }
+
+  #ul-confi {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #li-config {
+    margin-bottom: 10px;
+    color: #7678ed;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  #a-confi {
+    color: #3d348b;
+    text-decoration: none;
+  }
+
+  #a-confi:hover {
+    text-decoration: underline;
+  }
+
+  .excluir {
+    color: #ed7676;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  .roxoclaro {
+    color: #3D348B;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  /*Vender na nix*/
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  #header {
+    color: #3D348B;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #content {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  #labelvender {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #input-vender {
+    width: 75%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: #3D348B;
+    position: relative;
+    left:15px;
+  }
+
+  #botãoconfi {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 20px;
+
+
+  }
+
+  #botãoconfi:hover {
+    background-color: #7678ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #back-button {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  #p-vender {
+    color: #7678ED;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /*Cartões*/
+
+  .button-container {
+    text-align: center;
+  }
+
+  #botão-adcionar {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-color: #3D348B;
+    position: relative;
+    top: 7px;
+  }
+
+  #botão-adcionar a {
+    text-decoration: none;
+    color: #3D348B;
+  }
+
+  #casinha-cartoes {
+    border: none;
+  }
+
+  /*Adcionar cartão*/
+
+  .adccartao {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .form-grupo {
+    margin-bottom: 15px;
+  }
+
+  #titulo-adccar {
+
+    margin-top:10px;
+  margin-bottom: -15px;
+border-bottom: 1px solid #ccc;
+padding-bottom: 10px;
+background-color: #bbbcea;
+color: #3d348b;
+padding: 11px;
+
+  }
+
+  #card-number {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  #card-name {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  
+#cvv {
+  width: 20%;
+  padding: 5px;
+  font-size: 16px;
+  height: 40px; 
+  position: relative;
+  top: -113px;
+}
+
+  #expiry-date {
+    width: 20%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+  }
+
+  #Button-cartão-adc {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+    left: 25%;
+  }
+  /*Minha loja*/
+
+  .nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    color: #3d348b;
+    font-size: 24px;
+    position: relative;
+    bottom: -250px;
+  }
+
+  .caixinha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 260px;
+
+  }
+
+  .caixinha img:last-child {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+
+  .caixinha img {
+    width: 16%;
+
+  }
+
+  .palavras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 250px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 17px;
+  }
+
+  .palavras2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    width: 500px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 9px;
+  }
+
+  .linhaseparada {
+    border-bottom: 1px solid #bbbcea;
+    border-bottom-width: 1px;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .numeros {
+    display: flex;
+  }
+
+  .numero {
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transform: translateX(60px);
+    background-color: #d6dbec;
+  }
+
+  .palavras3 {
+    display: flex;
+
+  }
+
+  .word {
+    margin-right: 10px;
+    position: relative;
+    left: 65px;
+    color: #3d348b;
+  }
+
+  /*Produtos da loja*/
+
+  
+
+  /* Rodapé site*/
+
+  .TIOL {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #3D348B;
+    font-size: 20px;
+
+  }
+  /*perfil*/
+
+.profile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#username {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#edit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#edit-button:hover {
+  background-color: #0056b3;
+}
+
+
+/*confrimar pedido*/
+
+.fundoroxinho {
+color: #000;
+font-size: 17px;
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-weight: bold;
+transform: translateY(-28px);
+}
+
+.primeira-roxa {
+color: #3d348b; /* Cor da primeira linha */
+}
+
+.visu {
+position: absolute;
+top: 1px; /* Distância do topo */
+left: 229px;
+color: #7678ed;
+}
+
+.conteudo {
+width: 140px; /* Define a largura da imagem em pixels */
+height: auto;
+border-radius: 10px;
+float: left; /* Define a imagem para flutuar à esquerda */
+margin-right: 20px; /* Adiciona uma margem à direita da imagem para o espaço entre a imagem e o texto */
+}
+
+.numerozin {
+background-color: #003380;
+color: white;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+width: 170px; /* Largura desejada */
+height: 20px;
+}
+
+.palavraitem {
+color: #7678ed;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+font-weight: bold;
+width: 170px; /* Largura desejada */
+height: 20px;
+position: absolute;
+left: 134px;
+}
+
+.fundoroxinho2 {
+color: #3D348B; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-size: 17px;
+margin-top: 100px;
+font-weight: bold;
+}
+
+.precin {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 340px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.fundoroxinho3 {
+color: #3d348b; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+margin-top: 10px; /* Ajuste o valor conforme necessário */
+font-weight: bold;
+font-size: 17px;
+}
+
+.seta {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 370px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+
+}
+
+/*editar perfil*/
+
+.profile-form {
+max-width: 300px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+font-weight: bold;
+}
+
+
+.edit-button {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.edit-button:hover {
+background-color: #0056b3;
+}
+
+/*historico*/
+
+/*confirma*/
+
+.check-button3 {
+display: inline-block;
+position: relative;
+width: 20px;
+height: 20px;
+background-color: #fff;
+border: 2px solid #3d348b;
+border-radius: 50%;
+cursor: pointer;
+margin-left: 149px;
+transform: translateY(-90px);
+}
+
+.check-button3 input[type="checkbox"] {
+display: none;
+}
+
+.check-button3 .checkmark {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 16px;
+height: 16px;
+background-color: #3d348b; /* Cor de fundo quando estiver marcado */
+border-radius: 50%;
+display: none;
+}
+
+.check-button3 input[type="checkbox"]:checked + .checkmark {
+display: block;
+transform: translate(-50%, -50%) scale(1.1);
+}
+
+.cartaocredi {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: -26px;
+}
+
+.movimento {
+margin-left: -149px;
+margin-top: 100px;
+position: absolute;
+}
+
+.movimento2 {
+position: absolute;
+margin-left: 23px;
+margin-top: 10px;
+}
+
+.movimento3 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: 14px;
+}
+
+.total1 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -47px;
+}
+
+.subtotall {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.subpreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -32px;
+}
+
+.linha-separadora-roxa {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+}
+
+.taxa {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.taxapreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -27px;
+}
+
+.tota11roxo {
+background-color: #BBBCEA;
+background-size: -100px;
+}
+
+.tota11 {
+color: #3D348B;
+font-size: 22px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: -10px;
+}
+
+.precotot {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+height: 50px;
+}
+
+.final {
+color: #F1FAEE;
+font-size: 17px;
+font-weight: bold;
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
+background-color: #3D348B; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remova a borda do botão */
+border-radius: 5px; /* Borda arredondada */
+cursor: pointer; /* Cursor de apontar */
+font-size: 19px;
+margin-left: 318px;
+margin-top: -27px;
+height: 50px;
+}
+
+/* Estilo CSS para as divs .imagemcentral e .textocentral */
+.imagemcentral img {
+max-width: 100%;
+height: auto;
+display: block;
+margin-top: 80px;
+margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
+
+.textocentral {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+margin-top: 20px; /* Espaçamento superior para o texto */
+}
+
+.textocentral p {
+font-size: 18px;
+color: #333; /* Cor do texto */
+}
+
+.container {
+display: flex;
+align-items: center;
+}
+
+#campoTexto {
+margin-right: 10px;
+}
+
+.botao-add {
+padding: 10px 80px; /* Define o preenchimento interno do botão */
+font-size: 16px; /* Define o tamanho da fonte */
+background-color: #7678ED; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remove a borda do botão */
+margin-left: -73px;
+right: 150px;
+margin-top: 60px;
+position: absolute;
+transform: translateY(-44px);
+border-radius: 4px; /* Adiciona bordas arredondadas */
+cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+outline: none;
+}
+
+.aumentar {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+.aumentar2 {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+/*produtos*/
+
+.produtosub {
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+  left: 240px;
+}
+
+.button4 {
+width: 50px;
+height: 50px;
+background-color: #c59898;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button5 {
+width: 50px;
+height: 50px;
+background-color: #c4c4c4;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button6 {
+width: 50px;
+height: 50px;
+background-color: #000000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button7 {
+width: 50px;
+height: 50px;
+background-color: #ff0000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.selecionarcor{
+font-size: 30px;
+top: -100;
+position: relative;
+color: #3D348B;
+transform: translateY(-140px);
+}
+
+.checklist {
+display: flex;
+flex-wrap: wrap;
+}
+
+.hidden-checkbox {
+display: none;
+}
+
+.buttonn {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.button4,
+.button5,
+.button6,
+.button7 {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.abaitem {
+font-size: 35px;
+position: relative;
+color: #7678ED;
+top: 43px;
+}
+
+.abapreco {
+font-size: 35px;
+color: #3D348B;
+}
+
+.estrelas {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -84px; /* Mova para cima (use um valor negativo) */
+left: 290px;
+color: gold;
+}
+
+.numeroava {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -159px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.buttonn {
+width: 50px;
+height: 50px;
+background-color: #3d348b;
+border-radius: 15%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.produto2 {
+border: 2px solid #7678ED;
+padding: 5px;
+padding-right: -90px;
+border-radius: 20px;
+font-size: 24px;
+color: #3d348b;
+transform: translateY(-140px);
+background-color: #acacce;
+}
+
+.moveracima {
+position: relative;
+transform: translateY(-20px);
+}
+
+.textofrete {
+font-size: 26px;
+transform: translateY(-130px);
+}
+
+.verde {
+color: chartreuse;
+}
+
+.bloco {
+display: block;
+}
+
+.dataestimada {
+font-size: 26px;
+transform: translateY(-247px);
+position: relative;
+left: 280px;
+}
+
+#botaoaba {
+width: 370px; /* Define a largura do botão */
+height: 50px; /* Define a altura do botão */
+font-size: 26px;
+transform: translateY(-160px);
+left: -680px;
+border: 2px solid #7678ed; /* Cor da borda */
+background-color: #F1FAEE; /* Cor de fundo */
+color: #3d348b;
+}
+
+/* Estilizando o botão de alternância */
+#botaoaba {
+display: none; /* Oculta o input original */
+}
+
+/* Estilizando o rótulo (label) para parecer um botão */
+label {
+background-color: #3d348b;
+color: white;
+cursor: pointer;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);
+}
+
+/* Estilizando o rótulo quando o input está marcado */
+#botaoaba:checked + label {
+background-color: #7678ED;
+color: white;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo */
+#conteudo {
+display: none;
+padding: 10px;
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+font-size: 25px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo quando o input está marcado */
+#botaoaba:checked + label + #conteudo {
+display: block;
+}
+
+.botao-imagem {
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno do botão */
+border: none; /* Remove a borda padrão do link */
+cursor: pointer; /* Muda o cursor para indicar que é clicável */
+text-align: center; /* Centraliza o conteúdo horizontalmente */
+text-decoration: none; /* Remove a sublinhado do link */
+color: white; /* Cor do texto do botão */
+position: relative; /* Torna o label posicionável */
+transform: translateY(-240px);
+width: 200px !important;
+height: 100px !important;
+margin-left: 60px;
+}
+
+/*Parte 2*/
+
+.linha-separadora-roxaa2 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -250px;
+}
+
+.avali {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -230px;
+  margin-left: 20px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.estrelas2 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -304px; /* Mova para cima (use um valor negativo) */
+left: 300px;
+color: gold;
+}
+
+.numeroavali {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -377px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.imgpfp {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -380px;
+  margin-left: 40px;
+}
+
+.usu2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -450px;
+  margin-left: 90px;
+  color: #3d348b;
+
+}
+
+.estrelas3 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -526px; /* Mova para cima (use um valor negativo) */
+left: 200px;
+color: gold;
+}
+
+.avatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+  color: #3d348b;
+}
+
+.paisagem {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+}
+
+.paisagem5 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -625px;
+  margin-left: 140px;
+}
+
+.imgpfp2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 90px;
+}
+
+.lolja {
+background-color: hsl(246, 46%, 37%);
+color: white;
+font-size: 22px;
+padding: 1px 1px;
+width: 40px;
+border-radius: 10px;
+top: -660px;
+margin-left: 140px;
+position: relative;
+height: 50px;
+}
+
+.loljatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -660px;
+  margin-left: 120px;
+  color: #3d348b;
+}
+
+.coment {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -630px;
+  margin-left: 160px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.linha-separadora-roxaa3 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+}
+
+.recent {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 209px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.Subvitrine2 {
+top: -610px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row22 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.row23 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.produto22 {
+width: 100px;
+padding: 20px;
+margin: 0 10px;
+border: 1px solid #7678ED;
+text-align: center;
+border-radius: 20px;
+margin-top: -130px;
+}
+
+.produto22 img {
+max-width: 100%;
+margin-bottom: 10px;
+}
+
+.produto22 h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.produto22 p {
+font-size: 14px;
+}
+
+.maiss {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: 770px;
+  margin-left: 250px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.botoeis-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.botao-roxo {
+background-color: #3d348b;
+color: white;
+padding: 50px 90px;
+border: none;
+border-radius: 5px;
+margin-top: 900px;
+font-weight: bold;
+font-size: 28px;
+}
+
+.botao-rosa {
+background-color: #7678ED;
+color: white;
+padding: 33px 70px;
+border: none;
+font-size: 28px;
+border-radius: 5px;
+font-weight: bold;
+margin-top: 900px;
+}
+
+/*Editar perfil*/
+
+.imgdeperfils {
+  transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 230px;
+  margin-top: 60px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  #imagemExibida {
+    width: 100px; /* Tamanho desejado da imagem */
+    height: 100px; /* Tamanho desejado da imagem */
+    border-radius: 50%; /* Para tornar a imagem redonda */
+    display: flex;
+    
+  position: absolute;
+              justify-content: center;
+              align-items: center;
+              margin: -100;
+  
+  }
+  
+  input[type="text2"],
+  input[type="text3"],
+  input[type="email2"],
+  input[type="password2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  input[type="submit2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  .buttinn {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (altura x largura) */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Transforma o cursor em uma mão ao passar o mouse */
+  }
+  
+  .branquin {
+    margin-bottom: 200px;
+    color: white;
+  }
+  
+  .botao-add2 {
+    padding: 10px 80px; /* Define o preenchimento interno do botão */
+    font-size: 16px; /* Define o tamanho da fonte */
+    background-color: #7678ED; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    margin-left: -73px;
+    right: 150px;
+    margin-top: 190px;
+    position: absolute;
+    transform: translateY(-44px);
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+    outline: none;
+  }
+  
+  /*usuario*/
+  
+  .retangulin  {
+      width: 527px;
+      height: 100px;
+      background-color: #7678ed;
+  }
+  
+  
+  .pfpimg {
+    transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 60px;
+  margin-top: 10px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  .ususu {
+    margin-left: 150px;
+  margin-top: 4px;
+  position: absolute;
+  font-size: 25px;
+  color: #3d348b;
+  }
+  
+  .descri {
+    margin-left: 150px;
+  margin-top: 35px;
+  position: absolute;
+  font-size: 22px;
+  color: #7678ED;
+  }
+  
+  .transpari {
+      background: transparent;
+      border: 2px solid #3d348b;
+      color: #3d348b;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin-top: 100px;
+      cursor: pointer;
+      margin-left: 35px;
+      border-radius: 5px;
+  
+  }
+  
+  .envi {
+  position: absolute;
+  font-size: 22px;
+  margin-left: 110px;
+  margin-top: 20px;
+  }
+  
+  .envid {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 93px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .prep {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 300px;
+  margin-top: 45px;
+  color: #7678ED;
+  }
+  
+  .empre {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 270px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .compri {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 155px;
+    margin-top: 80px;
+  }
+  
+  .maais {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 240px;
+    margin-top: -20px;
+  }
+  
+  .linha-separadora-roxa3 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 50px;
+  }
+  
+  .linha-separadora-roxa5 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 190px;
+    position: relative;
+  }
+  
+  .branquin2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  /* Privacidade*/
+
+ 
+
+/* Estilo para os títulos "Privacidade e Termos de Uso" e "Termos de Uso" */
+
+.titulo-priv {
+
+  font-size: 24px; /* Tamanho da fonte */
+
+  color: #3d348b; /* Cor do texto */
+
+  margin-top: 20px; /* Espaço superior */
+
+}
+
+ 
+
+/* Estilo para os subtítulos */
+
+.subtitulo-priv {
+
+  font-size: 20px;
+
+  color: #3d348b;
+
+  margin-top: 10px;
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+
+}
+
+ 
+
+/* Estilo para os parágrafos de texto */
+
+.lista-priv {
+
+  font-size: 16px;
+
+  color: #333;
+
+  margin-top: 10px;
+
+}
+
+ 
+
+/* Estilo para as listas não ordenadas */
+
+.lista-priv2 ul {
+
+  list-style-type: disc; /* Estilo do marcador da lista */
+
+  margin-left: 20px; /* Espaço à esquerda */
+
+  padding-left: 20px; /* Espaço interno à lista */
+
+  color: #333;
+
+}
+
+ 
+
+/* Estilo para os itens da lista */
+
+.lista-priv2 li {
+
+  margin-top: 5px;
+
+}
+
+ 
+
+#privtexto {
+
+  font-size: 16px; /* Tamanho da fonte */
+
+  color: #333; /* Cor do texto */
+
+  line-height: 1.5; /* Espaçamento entre as linhas */
+
+  margin-top: 20px; /* Espaço superior */
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+}
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+
+  #Home {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #Header_home {
+    background-color: #3D348B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #Logo img {
+    height: 30px;
+    width: auto;
+  }
+
+  .pesquisa {
+    position: relative;
+  }
+
+  .pesquisa input {
+    border-radius: 20px;
+    padding: 8px 80px 8px 10px;
+    border: none;
+  }
+
+  .pesquisa button {
+    position: absolute;
+    top: 53%;
+    right: 4px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .pesquisa button img {
+    height: 20px;
+    width: auto;
+  }
+
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #3D348B;
+    min-width: 160px;
+    top: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -10px;
+    border-radius: 10px;
+
+
+  }
+
+  .submenu a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .submenu ul {
+    list-style-type: none;
+  }
+
+  .submenu a img {
+    margin-right: 8px;
+  }
+
+  .submenu a:hover {
+    background-color: #f1f1f1;
+  }
+
+  #menuBotao {
+    cursor: pointer;
+  }
+
+  .submenu.show {
+    display: block;
+  }
+
+  .carousel {
+
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    top: 50px
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-color: 0 0 10px #3D348B;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background-color: #3D348B;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+
+  .destaques {
+    text-align: center;
+  }
+
+  .recentes {
+
+
+    text-align: center;
+  }
+
+  .subtitulo-home {
+
+
+    color: #3D348B;
+
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    text-align: center;
+  }
+
+  .fundin {
+
+
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #90e0ef;
+
+
+    width: 157px;
+  }
+
+
+  footer {
+    background-color: #E1ECDD;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .cor-texto-rodape {
+    color: #124559;
+    text-decoration: none;
+  }
+
+  .rodinha {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 400px;
+    justify-content: center;
+  }
+
+  .subtitulo-rodape {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+  .lista-rodape {
+    list-style-type: none;
+  }
+
+  .nini {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .direito p {
+    width: 350px;
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    left: 10%;
+  }
+
+
+  /*Cadastro e login */
+
+  .homecad {
+    width: 50px;
+    position: relative;
+    left: 40px;
+    top: 40px;
+  }
+
+
+
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+
+  }
+
+  .roxo {
+    background-color: #3D348B;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 350px;
+    padding: 5px;
+    border: 5px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    position: relative;
+    left: 25px;
+    font-size: 25px;
+    top: 680px;
+
+  }
+
+  .enviar {
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 685px;
+    left: 110px;
+    font-size: 30px;
+
+  }
+
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 38px;
+    text-align: center;
+    color: #3D348B;
+    position: relative;
+    top: 60px;
+
+  }
+
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 50px;
+    position: relative;
+    box-sizing: border-box;
+    top: 650px;
+    width: 985px;
+    height: 925px;
+    left: 200px;
+  }
+
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing: border-box;
+    top: 190px;
+    width: 400px;
+    height: 450px;
+    left: 45px;
+  }
+
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+
+  .Entrar {
+    position: relative;
+    top: 450px;
+    font-size: 50px;
+    left: 400px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #3D348B;
+
+  }
+
+  .Entrar2 {
+    position: relative;
+    top: 110px;
+    left: 5px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #BBBCEA;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  #lilas {
+    color: #3D348B;
+  }
+
+  /*carrinho*/
+
+  .titulo-carr {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3D348B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .carrinho-produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    left: 20px;
+    top: 9px;
+  }
+
+  .imagem-produto {
+    margin-right: 20px;
+  }
+
+  .imagem-produto img {
+    width: 120px;
+    height: 166px;
+  }
+
+  #item-name {
+    color: #7678ED;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  #preco {
+    font-weight: bold;
+    color: #3D348B;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  #quantidade {
+    width: 20%;
+    border-radius: 5px;
+    border-color: #3D348B;
+
+  }
+
+  #botao-carrinho {
+    border-radius: 5px;
+    background-color: #7678ED;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+
+  .resumo {
+
+
+    background-color: #D6DBEC;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .total-titulo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #3D348B;
+  }
+
+  .total-valor {
+
+    margin-top: 10px;
+    color: #3D348B;
+    position: relative;
+    top: -5px;
+  }
+
+  .checkout-cta {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /*Finalização*/
+
+  .Imagemredondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 200px;
+  }
+
+  .Texto-finalização {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    color: #3d348b;
+    margin-top: 50px;
+    font-size: 28px;
+  }
+
+  /*configuraçao*/
+
+  #configuracao {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .config {
+    color: #3d348b;
+
+  }
+
+  #titulo-config {
+    text-align: center;
+
+  }
+
+  #subti-config {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    background-color: #bbbcea;
+    color: #3d348b;
+    padding: 11px;
+  }
+
+  #ul-confi {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #li-config {
+    margin-bottom: 10px;
+    color: #7678ed;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  #a-confi {
+    color: #3d348b;
+    text-decoration: none;
+  }
+
+  #a-confi:hover {
+    text-decoration: underline;
+  }
+
+  .excluir {
+    color: #ed7676;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  .roxoclaro {
+    color: #3D348B;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  /*Vender na nix*/
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  #header {
+    color: #3D348B;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #content {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  #labelvender {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #input-vender {
+    width: 60%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: #3D348B;
+    position: relative;
+    left: 20px;
+  }
+
+  #botãoconfi {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 20px;
+
+
+  }
+
+  #botãoconfi:hover {
+    background-color: #7678ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #back-button {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  #p-vender {
+    color: #7678ED;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /*Cartões*/
+
+  .button-container {
+    text-align: center;
+  }
+
+  #botão-adcionar {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-color: #3D348B;
+    position: relative;
+    top: 7px;
+  }
+
+  #botão-adcionar a {
+    text-decoration: none;
+    color: #3D348B;
+  }
+
+  #casinha-cartoes {
+    border: none;
+  }
+
+  /*Adcionar cartão*/
+
+  .adccartao {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .form-grupo {
+    margin-bottom: 15px;
+  }
+
+  #titulo-adccar {
+
+    margin-top:10px;
+  margin-bottom: -15px;
+border-bottom: 1px solid #ccc;
+padding-bottom: 10px;
+background-color: #bbbcea;
+color: #3d348b;
+padding: 11px;
+
+  }
+
+  #card-number {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  #card-name {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  
+#cvv {
+  width: 20%;
+  padding: 5px;
+  font-size: 16px;
+  height: 40px; 
+  position: relative;
+  top: -113px;
+}
+
+  #expiry-date {
+    width: 20%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+  }
+
+  #Button-cartão-adc {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+    left: 25%;
+  }
+
+  /*Minha loja*/
+
+  .nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    color: #3d348b;
+    font-size: 24px;
+    position: relative;
+    bottom: -250px;
+  }
+
+  .caixinha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 260px;
+
+  }
+
+  .caixinha img:last-child {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+
+  .caixinha img {
+    width: 16%;
+
+  }
+
+  .palavras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 250px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 17px;
+  }
+
+  .palavras2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    width: 500px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 9px;
+  }
+
+  .linhaseparada {
+    border-bottom: 1px solid #bbbcea;
+    border-bottom-width: 1px;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .numeros {
+    display: flex;
+  }
+
+  .numero {
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transform: translateX(60px);
+    background-color: #d6dbec;
+  }
+
+  .palavras3 {
+    display: flex;
+
+  }
+
+  .word {
+    margin-right: 10px;
+    position: relative;
+    left: 65px;
+    color: #3d348b;
+  }
+
+  /*Produtos da loja*/
+
+  /* Rodapé site*/
+
+  .TIOL {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #3D348B;
+    font-size: 20px;
+
+  }
+/*perfil*/
+
+.profile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#username {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#edit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#edit-button:hover {
+  background-color: #0056b3;
+}
+
+
+/*confrimar pedido*/
+
+.fundoroxinho {
+color: #000;
+font-size: 17px;
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-weight: bold;
+transform: translateY(-28px);
+}
+
+.primeira-roxa {
+color: #3d348b; /* Cor da primeira linha */
+}
+
+.visu {
+position: absolute;
+top: 1px; /* Distância do topo */
+left: 229px;
+color: #7678ed;
+}
+
+.conteudo {
+width: 140px; /* Define a largura da imagem em pixels */
+height: auto;
+border-radius: 10px;
+float: left; /* Define a imagem para flutuar à esquerda */
+margin-right: 20px; /* Adiciona uma margem à direita da imagem para o espaço entre a imagem e o texto */
+}
+
+.numerozin {
+background-color: #003380;
+color: white;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+width: 170px; /* Largura desejada */
+height: 20px;
+}
+
+.palavraitem {
+color: #7678ed;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+font-weight: bold;
+width: 170px; /* Largura desejada */
+height: 20px;
+position: absolute;
+left: 134px;
+}
+
+.fundoroxinho2 {
+color: #3D348B; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-size: 17px;
+margin-top: 100px;
+font-weight: bold;
+}
+
+.precin {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 340px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.fundoroxinho3 {
+color: #3d348b; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+margin-top: 10px; /* Ajuste o valor conforme necessário */
+font-weight: bold;
+font-size: 17px;
+}
+
+.seta {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 370px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+
+}
+
+/*editar perfil*/
+
+.profile-form {
+max-width: 300px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.edit-button {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.edit-button:hover {
+background-color: #0056b3;
+}
+
+/*historico*/
+
+/*confirma*/
+
+.check-button3 {
+display: inline-block;
+position: relative;
+width: 20px;
+height: 20px;
+background-color: #fff;
+border: 2px solid #3d348b;
+border-radius: 50%;
+cursor: pointer;
+margin-left: 149px;
+transform: translateY(-90px);
+}
+
+.check-button3 input[type="checkbox"] {
+display: none;
+}
+
+.check-button3 .checkmark {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 16px;
+height: 16px;
+background-color: #3d348b; /* Cor de fundo quando estiver marcado */
+border-radius: 50%;
+display: none;
+}
+
+.check-button3 input[type="checkbox"]:checked + .checkmark {
+display: block;
+transform: translate(-50%, -50%) scale(1.1);
+}
+
+.cartaocredi {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: -26px;
+}
+
+.movimento {
+margin-left: -149px;
+margin-top: 100px;
+position: absolute;
+}
+
+.movimento2 {
+position: absolute;
+margin-left: 23px;
+margin-top: 10px;
+}
+
+.movimento3 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: 14px;
+}
+
+.total1 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -47px;
+}
+
+.subtotall {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.subpreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -32px;
+}
+
+.linha-separadora-roxa {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+}
+
+.taxa {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.taxapreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -27px;
+}
+
+.tota11roxo {
+background-color: #BBBCEA;
+background-size: -100px;
+}
+
+.tota11 {
+color: #3D348B;
+font-size: 22px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: -10px;
+}
+
+.precotot {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+height: 50px;
+}
+
+.final {
+color: #F1FAEE;
+font-size: 17px;
+font-weight: bold;
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
+background-color: #3D348B; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remova a borda do botão */
+border-radius: 5px; /* Borda arredondada */
+cursor: pointer; /* Cursor de apontar */
+font-size: 19px;
+margin-left: 318px;
+margin-top: -27px;
+height: 50px;
+}
+
+/* Estilo CSS para as divs .imagemcentral e .textocentral */
+.imagemcentral img {
+max-width: 100%;
+height: auto;
+display: block;
+margin-top: 80px;
+margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
+
+.textocentral {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+margin-top: 20px; /* Espaçamento superior para o texto */
+}
+
+.textocentral p {
+font-size: 18px;
+color: #333; /* Cor do texto */
+}
+
+.container {
+display: flex;
+align-items: center;
+}
+
+#campoTexto {
+margin-right: 10px;
+}
+
+.botao-add {
+padding: 10px 80px; /* Define o preenchimento interno do botão */
+font-size: 16px; /* Define o tamanho da fonte */
+background-color: #7678ED; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remove a borda do botão */
+margin-left: -73px;
+right: 150px;
+margin-top: 60px;
+position: absolute;
+transform: translateY(-44px);
+border-radius: 4px; /* Adiciona bordas arredondadas */
+cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+outline: none;
+}
+
+.aumentar {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+.aumentar2 {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+/*produtos*/
+
+.produtosub {
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+  left: 240px;
+}
+
+.button4 {
+width: 50px;
+height: 50px;
+background-color: #c59898;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button5 {
+width: 50px;
+height: 50px;
+background-color: #c4c4c4;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button6 {
+width: 50px;
+height: 50px;
+background-color: #000000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button7 {
+width: 50px;
+height: 50px;
+background-color: #ff0000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.selecionarcor{
+font-size: 30px;
+top: -100;
+position: relative;
+color: #3D348B;
+transform: translateY(-140px);
+}
+
+.checklist {
+display: flex;
+flex-wrap: wrap;
+}
+
+.hidden-checkbox {
+display: none;
+}
+
+.buttonn {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.button4,
+.button5,
+.button6,
+.button7 {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.abaitem {
+font-size: 35px;
+position: relative;
+color: #7678ED;
+top: 43px;
+}
+
+.abapreco {
+font-size: 35px;
+color: #3D348B;
+}
+
+.estrelas {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -84px; /* Mova para cima (use um valor negativo) */
+left: 290px;
+color: gold;
+}
+
+.numeroava {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -159px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.buttonn {
+width: 50px;
+height: 50px;
+background-color: #3d348b;
+border-radius: 15%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.produto2 {
+border: 2px solid #7678ED;
+padding: 5px;
+padding-right: -90px;
+border-radius: 20px;
+font-size: 24px;
+color: #3d348b;
+transform: translateY(-140px);
+background-color: #acacce;
+}
+
+.moveracima {
+position: relative;
+transform: translateY(-20px);
+}
+
+.textofrete {
+font-size: 26px;
+transform: translateY(-130px);
+}
+
+.verde {
+color: chartreuse;
+}
+
+.bloco {
+display: block;
+}
+
+.dataestimada {
+font-size: 26px;
+transform: translateY(-247px);
+position: relative;
+left: 280px;
+}
+
+#botaoaba {
+width: 370px; /* Define a largura do botão */
+height: 50px; /* Define a altura do botão */
+font-size: 26px;
+transform: translateY(-160px);
+left: -680px;
+border: 2px solid #7678ed; /* Cor da borda */
+background-color: #F1FAEE; /* Cor de fundo */
+color: #3d348b;
+}
+
+/* Estilizando o botão de alternância */
+#botaoaba {
+display: none; /* Oculta o input original */
+}
+
+/* Estilizando o rótulo (label) para parecer um botão */
+label {
+background-color: #3d348b;
+color: white;
+cursor: pointer;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);
+}
+
+/* Estilizando o rótulo quando o input está marcado */
+#botaoaba:checked + label {
+background-color: #7678ED;
+color: white;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo */
+#conteudo {
+display: none;
+padding: 10px;
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+font-size: 25px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo quando o input está marcado */
+#botaoaba:checked + label + #conteudo {
+display: block;
+}
+
+.botao-imagem {
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno do botão */
+border: none; /* Remove a borda padrão do link */
+cursor: pointer; /* Muda o cursor para indicar que é clicável */
+text-align: center; /* Centraliza o conteúdo horizontalmente */
+text-decoration: none; /* Remove a sublinhado do link */
+color: white; /* Cor do texto do botão */
+position: relative; /* Torna o label posicionável */
+transform: translateY(-240px);
+width: 200px !important;
+height: 100px !important;
+margin-left: 60px;
+}
+
+/*Parte 2*/
+
+.linha-separadora-roxaa2 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -250px;
+}
+
+.avali {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -230px;
+  margin-left: 20px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.estrelas2 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -304px; /* Mova para cima (use um valor negativo) */
+left: 300px;
+color: gold;
+}
+
+.numeroavali {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -377px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.imgpfp {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -380px;
+  margin-left: 40px;
+}
+
+.usu2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -450px;
+  margin-left: 90px;
+  color: #3d348b;
+
+}
+
+.estrelas3 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -526px; /* Mova para cima (use um valor negativo) */
+left: 200px;
+color: gold;
+}
+
+.avatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+  color: #3d348b;
+}
+
+.paisagem {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+}
+
+.paisagem5 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -625px;
+  margin-left: 140px;
+}
+
+.imgpfp2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 90px;
+}
+
+.lolja {
+background-color: hsl(246, 46%, 37%);
+color: white;
+font-size: 22px;
+padding: 1px 1px;
+width: 40px;
+border-radius: 10px;
+top: -660px;
+margin-left: 140px;
+position: relative;
+height: 50px;
+}
+
+.loljatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -660px;
+  margin-left: 120px;
+  color: #3d348b;
+}
+
+.coment {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -630px;
+  margin-left: 160px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.linha-separadora-roxaa3 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+}
+
+.recent {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 209px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.Subvitrine2 {
+top: -610px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row22 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.row23 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.produto22 {
+width: 100px;
+padding: 20px;
+margin: 0 10px;
+border: 1px solid #7678ED;
+text-align: center;
+border-radius: 20px;
+margin-top: -130px;
+}
+
+.produto22 img {
+max-width: 100%;
+margin-bottom: 10px;
+}
+
+.produto22 h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.produto22 p {
+font-size: 14px;
+}
+
+.maiss {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: 770px;
+  margin-left: 250px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.botoeis-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.botao-roxo {
+background-color: #3d348b;
+color: white;
+padding: 50px 90px;
+border: none;
+border-radius: 5px;
+margin-top: 900px;
+font-weight: bold;
+font-size: 28px;
+}
+
+.botao-rosa {
+background-color: #7678ED;
+color: white;
+padding: 33px 70px;
+border: none;
+font-size: 28px;
+border-radius: 5px;
+font-weight: bold;
+margin-top: 900px;
+}
+
+/*Editar perfil*/
+
+.imgdeperfils {
+  transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 230px;
+  margin-top: 60px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  #imagemExibida {
+    width: 100px; /* Tamanho desejado da imagem */
+    height: 100px; /* Tamanho desejado da imagem */
+    border-radius: 50%; /* Para tornar a imagem redonda */
+    display: flex;
+    
+  position: absolute;
+              justify-content: center;
+              align-items: center;
+              margin: -100;
+  
+  }
+  
+  input[type="text2"],
+  input[type="text3"],
+  input[type="email2"],
+  input[type="password2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  input[type="submit2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  .buttinn {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (altura x largura) */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Transforma o cursor em uma mão ao passar o mouse */
+  }
+  
+  .branquin {
+    margin-bottom: 200px;
+    color: white;
+  }
+  
+  .botao-add2 {
+    padding: 10px 80px; /* Define o preenchimento interno do botão */
+    font-size: 16px; /* Define o tamanho da fonte */
+    background-color: #7678ED; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    margin-left: -73px;
+    right: 150px;
+    margin-top: 190px;
+    position: absolute;
+    transform: translateY(-44px);
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+    outline: none;
+  }
+  
+  /*usuario*/
+  
+  .retangulin  {
+      width: 527px;
+      height: 100px;
+      background-color: #7678ed;
+  }
+  
+  
+  .pfpimg {
+    transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 60px;
+  margin-top: 10px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  .ususu {
+    margin-left: 150px;
+  margin-top: 4px;
+  position: absolute;
+  font-size: 25px;
+  color: #3d348b;
+  }
+  
+  .descri {
+    margin-left: 150px;
+  margin-top: 35px;
+  position: absolute;
+  font-size: 22px;
+  color: #7678ED;
+  }
+  
+  .transpari {
+      background: transparent;
+      border: 2px solid #3d348b;
+      color: #3d348b;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin-top: 100px;
+      cursor: pointer;
+      margin-left: 35px;
+      border-radius: 5px;
+  
+  }
+  
+  .envi {
+  position: absolute;
+  font-size: 22px;
+  margin-left: 110px;
+  margin-top: 20px;
+  }
+  
+  .envid {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 93px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .prep {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 300px;
+  margin-top: 45px;
+  color: #7678ED;
+  }
+  
+  .empre {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 270px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .compri {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 155px;
+    margin-top: 80px;
+  }
+  
+  .maais {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 240px;
+    margin-top: -20px;
+  }
+  
+  .linha-separadora-roxa3 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 50px;
+  }
+  
+  .linha-separadora-roxa5 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 190px;
+    position: relative;
+  }
+  
+  .branquin2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  /* Privacidade*/
+
+ 
+
+/* Estilo para os títulos "Privacidade e Termos de Uso" e "Termos de Uso" */
+
+.titulo-priv {
+
+  font-size: 24px; /* Tamanho da fonte */
+
+  color: #3d348b; /* Cor do texto */
+
+  margin-top: 20px; /* Espaço superior */
+
+}
+
+ 
+
+/* Estilo para os subtítulos */
+
+.subtitulo-priv {
+
+  font-size: 20px;
+
+  color: #3d348b;
+
+  margin-top: 10px;
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+
+}
+
+ 
+
+/* Estilo para os parágrafos de texto */
+
+.lista-priv {
+
+  font-size: 16px;
+
+  color: #333;
+
+  margin-top: 10px;
+
+}
+
+ 
+
+/* Estilo para as listas não ordenadas */
+
+.lista-priv2 ul {
+
+  list-style-type: disc; /* Estilo do marcador da lista */
+
+  margin-left: 20px; /* Espaço à esquerda */
+
+  padding-left: 20px; /* Espaço interno à lista */
+
+  color: #333;
+
+}
+
+ 
+
+/* Estilo para os itens da lista */
+
+.lista-priv2 li {
+
+  margin-top: 5px;
+
+}
+
+ 
+
+#privtexto {
+
+  font-size: 16px; /* Tamanho da fonte */
+
+  color: #333; /* Cor do texto */
+
+  line-height: 1.5; /* Espaçamento entre as linhas */
+
+  margin-top: 20px; /* Espaço superior */
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+
+}
+}
+
+@media (min-width: 761px) and (max-width: 960px) {
+
+  #Home {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #Header_home {
+    background-color: #3D348B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #Logo img {
+    height: 30px;
+    width: auto;
+  }
+
+  .pesquisa {
+    position: relative;
+  }
+
+  .pesquisa input {
+    border-radius: 20px;
+    padding: 8px 200px 8px 10px;
+    border: none;
+    font-size: 20px;
+  }
+
+  .pesquisa button {
+    position: absolute;
+    top: 53%;
+    right: 5px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .pesquisa button img {
+    height: 25px;
+    width: auto;
+  }
+
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #3D348B;
+    min-width: 160px;
+    top: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -10px;
+    border-radius: 10px;
+
+
+  }
+
+  .submenu a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .submenu ul {
+    list-style-type: none;
+  }
+
+  .submenu a img {
+    margin-right: 8px;
+  }
+
+  .submenu a:hover {
+    background-color: #f1f1f1;
+  }
+
+  #menuBotao {
+    cursor: pointer;
+  }
+
+  .submenu.show {
+    display: block;
+  }
+
+  .carousel {
+
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    top: 10px
+  }
+
+  .slide {
+    display: none;
+    position: relative;
+    top: 100px;
+  }
+
+  .slide img {
+
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-color: 0 0 10px #3D348B;
+    position: relative;
+    top: -100px;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background-color: #3D348B;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+
+  .destaques {
+    text-align: center;
+  }
+
+  .recentes {
+
+
+    text-align: center;
+  }
+
+  .subtitulo-home {
+
+
+    color: #3D348B;
+
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    text-align: center;
+  }
+
+  .fundin {
+
+
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #90e0ef;
+
+
+    width: 157px;
+  }
+
+
+
+  footer {
+    background-color: #E1ECDD;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .cor-texto-rodape {
+    color: #124559;
+    text-decoration: none;
+  }
+
+  .rodinha {
+    display: grid;
+    grid-template-columns: 80% 40%;
+    width: 400px;
+    justify-content: center;
+    position: relative;
+    left: 150px;
+  }
+
+  .subtitulo-rodape {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+  .lista-rodape {
+    list-style-type: none;
+  }
+
+  .nini {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .direito p {
+    width: 350px;
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    left: 25%;
+  }
+
+
+  /*Cadastro e login */
+
+  .homecad {
+    width: 60px;
+    position: relative;
+    left: 40px;
+    top: 40px;
+  }
+
+
+
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+
+  }
+
+  .roxo {
+    background-color: #3D348B;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 400px;
+    padding: 5px;
+    border: 5px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    position: relative;
+    left: 55px;
+    font-size: 30px;
+    top: 700px;
+
+  }
+
+  .enviar {
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 720px;
+    left: 140px;
+    font-size: 40px;
+
+  }
+
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 38px;
+    text-align: center;
+    color: #3D348B;
+    position: relative;
+    top: 70px;
+
+  }
+
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 50px;
+    position: relative;
+    box-sizing: border-box;
+    top: 650px;
+    width: 985px;
+    height: 925px;
+    left: 200px;
+  }
+
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing: border-box;
+    top: 100px;
+    width: 500px;
+    height: 550px;
+    left: 130px;
+  }
+
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+
+  .Entrar {
+    position: relative;
+    top: 450px;
+    font-size: 50px;
+    left: 400px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #3D348B;
+
+  }
+
+  .Entrar2 {
+    position: relative;
+    top: -10px;
+    font-size: 50px;
+    left: 3px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #BBBCEA;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #lilas {
+    color: #3D348B;
+  }
+
+  /*carrinho*/
+
+  .titulo-carr {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3D348B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .carrinho-produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    left: 20px;
+    top: 8px;
+  }
+
+  .imagem-produto {
+    margin-right: 20px;
+  }
+
+  .imagem-produto img {
+    width: 120px;
+    height: 166px;
+  }
+
+  #item-name {
+    color: #7678ED;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+  }
+
+  #preco {
+    font-weight: bold;
+    color: #3D348B;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  #quantidade {
+    width: 20%;
+    border-radius: 5px;
+    border-color: #3D348B;
+
+  }
+
+  #botao-carrinho {
+    border-radius: 5px;
+    background-color: #7678ED;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+
+  .resumo {
+
+
+    background-color: #D6DBEC;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .total-titulo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #3D348B;
+  }
+
+  .total-valor {
+
+    margin-top: 10px;
+    color: #3D348B;
+    position: relative;
+    top: -5px;
+  }
+
+  .checkout-cta {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /*Finalização*/
+
+  .Imagemredondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 200px;
+  }
+
+  .Texto-finalização {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    color: #3d348b;
+    margin-top: 50px;
+    font-size: 28px;
+  }
+
+  /*configuraçao*/
+
+  #configuracao {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .config {
+    color: #3d348b;
+
+  }
+
+  #titulo-config {
+    text-align: center;
+
+  }
+
+  #subti-config {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    background-color: #bbbcea;
+    color: #3d348b;
+    padding: 11px;
+  }
+
+  #ul-confi {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #li-config {
+    margin-bottom: 10px;
+    color: #7678ed;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  #a-confi {
+    color: #3d348b;
+    text-decoration: none;
+  }
+
+  #a-confi:hover {
+    text-decoration: underline;
+  }
+
+  .excluir {
+    color: #ed7676;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  .roxoclaro {
+    color: #3D348B;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  /*Vender na nix*/
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  #header {
+    color: #3D348B;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #content {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  #labelvender {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #input-vender {
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: #3D348B;
+    position: relative;
+    left: 10px; 
+  }
+
+  #botãoconfi {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 10px;
+
+
+  }
+
+  #botãoconfi:hover {
+    background-color: #7678ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #back-button {
+    position: relative;
+    top: 15px;
+    left: 5px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  #p-vender {
+    color: #7678ED;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /*Cartões*/
+
+  .button-container {
+    text-align: center;
+  }
+
+  #botão-adcionar {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-color: #3D348B;
+    position: relative;
+    top: 6px;
+  }
+
+  #botão-adcionar a {
+    text-decoration: none;
+    color: #3D348B;
+  }
+
+  #casinha-cartoes {
+    border: none;
+  }
+
+  /*Adcionar cartão*/
+
+  .adccartao {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .form-grupo {
+    margin-bottom: 15px;
+  }
+
+  #titulo-adccar {
+
+    margin-top:10px;
+  margin-bottom: -15px;
+border-bottom: 1px solid #ccc;
+padding-bottom: 10px;
+background-color: #bbbcea;
+color: #3d348b;
+padding: 11px;
+
+  }
+
+  #card-number {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  #card-name {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  
+#cvv {
+  width: 20%;
+  padding: 5px;
+  font-size: 16px;
+  height: 40px; 
+  position: relative;
+  top: -113px;
+}
+
+  #expiry-date {
+    width: 20%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+  }
+
+  #Button-cartão-adc {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+    left: 25%;
+  }
+  /*Minha loja*/
+
+  .nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    color: #3d348b;
+    font-size: 24px;
+    position: relative;
+    bottom: -250px;
+  }
+
+  .caixinha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 260px;
+
+  }
+
+  .caixinha img:last-child {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+
+  .caixinha img {
+    width: 16%;
+
+  }
+
+  .palavras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 250px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 17px;
+  }
+
+  .palavras2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    width: 500px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 9px;
+  }
+
+  .linhaseparada {
+    border-bottom: 1px solid #bbbcea;
+    border-bottom-width: 1px;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .numeros {
+    display: flex;
+  }
+
+  .numero {
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transform: translateX(60px);
+    background-color: #d6dbec;
+  }
+
+  .palavras3 {
+    display: flex;
+
+  }
+
+  .word {
+    margin-right: 10px;
+    position: relative;
+    left: 65px;
+    color: #3d348b;
+  }
+
+  /*Produtos da loja*/
+
+
+  /* Rodapé site*/
+
+  .TIOL {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #3D348B;
+    font-size: 20px;
+
+  }
+/*perfil*/
+
+.profile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#username {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#edit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#edit-button:hover {
+  background-color: #0056b3;
+}
+
+
+/*confrimar pedido*/
+
+.fundoroxinho {
+color: #000;
+font-size: 17px;
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-weight: bold;
+transform: translateY(-28px);
+}
+
+.primeira-roxa {
+color: #3d348b; /* Cor da primeira linha */
+}
+
+.visu {
+position: absolute;
+top: 1px; /* Distância do topo */
+left: 229px;
+color: #7678ed;
+}
+
+.conteudo {
+width: 140px; /* Define a largura da imagem em pixels */
+height: auto;
+border-radius: 10px;
+float: left; /* Define a imagem para flutuar à esquerda */
+margin-right: 20px; /* Adiciona uma margem à direita da imagem para o espaço entre a imagem e o texto */
+}
+
+.numerozin {
+background-color: #003380;
+color: white;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+width: 170px; /* Largura desejada */
+height: 20px;
+}
+
+.palavraitem {
+color: #7678ed;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+font-weight: bold;
+width: 170px; /* Largura desejada */
+height: 20px;
+position: absolute;
+left: 134px;
+}
+
+.fundoroxinho2 {
+color: #3D348B; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-size: 17px;
+margin-top: 100px;
+font-weight: bold;
+}
+
+.precin {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 340px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.fundoroxinho3 {
+color: #3d348b; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+margin-top: 10px; /* Ajuste o valor conforme necessário */
+font-weight: bold;
+font-size: 17px;
+}
+
+.seta {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 370px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+
+}
+
+/*editar perfil*/
+
+.profile-form {
+max-width: 300px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.edit-button {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.edit-button:hover {
+background-color: #0056b3;
+}
+
+/*historico*/
+
+/*confirma*/
+
+.check-button3 {
+display: inline-block;
+position: relative;
+width: 20px;
+height: 20px;
+background-color: #fff;
+border: 2px solid #3d348b;
+border-radius: 50%;
+cursor: pointer;
+margin-left: 149px;
+transform: translateY(-90px);
+}
+
+.check-button3 input[type="checkbox"] {
+display: none;
+}
+
+.check-button3 .checkmark {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 16px;
+height: 16px;
+background-color: #3d348b; /* Cor de fundo quando estiver marcado */
+border-radius: 50%;
+display: none;
+}
+
+.check-button3 input[type="checkbox"]:checked + .checkmark {
+display: block;
+transform: translate(-50%, -50%) scale(1.1);
+}
+
+.cartaocredi {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: -26px;
+}
+
+.movimento {
+margin-left: -149px;
+margin-top: 100px;
+position: absolute;
+}
+
+.movimento2 {
+position: absolute;
+margin-left: 23px;
+margin-top: 10px;
+}
+
+.movimento3 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: 14px;
+}
+
+.total1 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -47px;
+}
+
+.subtotall {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.subpreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -32px;
+}
+
+.linha-separadora-roxa {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+}
+
+.taxa {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.taxapreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -27px;
+}
+
+.tota11roxo {
+background-color: #BBBCEA;
+background-size: -100px;
+}
+
+.tota11 {
+color: #3D348B;
+font-size: 22px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: -10px;
+}
+
+.precotot {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+height: 50px;
+}
+
+.final {
+color: #F1FAEE;
+font-size: 17px;
+font-weight: bold;
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
+background-color: #3D348B; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remova a borda do botão */
+border-radius: 5px; /* Borda arredondada */
+cursor: pointer; /* Cursor de apontar */
+font-size: 19px;
+margin-left: 318px;
+margin-top: -27px;
+height: 50px;
+}
+
+/* Estilo CSS para as divs .imagemcentral e .textocentral */
+.imagemcentral img {
+max-width: 100%;
+height: auto;
+display: block;
+margin-top: 80px;
+margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
+
+.textocentral {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+margin-top: 20px; /* Espaçamento superior para o texto */
+}
+
+.textocentral p {
+font-size: 18px;
+color: #333; /* Cor do texto */
+}
+
+.container {
+display: flex;
+align-items: center;
+}
+
+#campoTexto {
+margin-right: 10px;
+}
+
+.botao-add {
+padding: 10px 80px; /* Define o preenchimento interno do botão */
+font-size: 16px; /* Define o tamanho da fonte */
+background-color: #7678ED; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remove a borda do botão */
+margin-left: -73px;
+right: 150px;
+margin-top: 60px;
+position: absolute;
+transform: translateY(-44px);
+border-radius: 4px; /* Adiciona bordas arredondadas */
+cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+outline: none;
+}
+
+.aumentar {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+.aumentar2 {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+/*produtos*/
+
+.produtosub {
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+  left: 240px;
+}
+
+.button4 {
+width: 50px;
+height: 50px;
+background-color: #c59898;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button5 {
+width: 50px;
+height: 50px;
+background-color: #c4c4c4;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button6 {
+width: 50px;
+height: 50px;
+background-color: #000000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button7 {
+width: 50px;
+height: 50px;
+background-color: #ff0000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.selecionarcor{
+font-size: 30px;
+top: -100;
+position: relative;
+color: #3D348B;
+transform: translateY(-140px);
+}
+
+.checklist {
+display: flex;
+flex-wrap: wrap;
+}
+
+.hidden-checkbox {
+display: none;
+}
+
+.buttonn {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.button4,
+.button5,
+.button6,
+.button7 {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.abaitem {
+font-size: 35px;
+position: relative;
+color: #7678ED;
+top: 43px;
+}
+
+.abapreco {
+font-size: 35px;
+color: #3D348B;
+}
+
+.estrelas {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -84px; /* Mova para cima (use um valor negativo) */
+left: 290px;
+color: gold;
+}
+
+.numeroava {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -159px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.buttonn {
+width: 50px;
+height: 50px;
+background-color: #3d348b;
+border-radius: 15%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.produto2 {
+border: 2px solid #7678ED;
+padding: 5px;
+padding-right: -90px;
+border-radius: 20px;
+font-size: 24px;
+color: #3d348b;
+transform: translateY(-140px);
+background-color: #acacce;
+}
+
+.moveracima {
+position: relative;
+transform: translateY(-20px);
+}
+
+.textofrete {
+font-size: 26px;
+transform: translateY(-130px);
+}
+
+.verde {
+color: chartreuse;
+}
+
+.bloco {
+display: block;
+}
+
+.dataestimada {
+font-size: 26px;
+transform: translateY(-247px);
+position: relative;
+left: 280px;
+}
+
+#botaoaba {
+width: 370px; /* Define a largura do botão */
+height: 50px; /* Define a altura do botão */
+font-size: 26px;
+transform: translateY(-160px);
+left: -680px;
+border: 2px solid #7678ed; /* Cor da borda */
+background-color: #F1FAEE; /* Cor de fundo */
+color: #3d348b;
+}
+
+/* Estilizando o botão de alternância */
+#botaoaba {
+display: none; /* Oculta o input original */
+}
+
+/* Estilizando o rótulo (label) para parecer um botão */
+label {
+background-color: #3d348b;
+color: white;
+cursor: pointer;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);
+}
+
+/* Estilizando o rótulo quando o input está marcado */
+#botaoaba:checked + label {
+background-color: #7678ED;
+color: white;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo */
+#conteudo {
+display: none;
+padding: 10px;
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+font-size: 25px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo quando o input está marcado */
+#botaoaba:checked + label + #conteudo {
+display: block;
+}
+
+.botao-imagem {
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno do botão */
+border: none; /* Remove a borda padrão do link */
+cursor: pointer; /* Muda o cursor para indicar que é clicável */
+text-align: center; /* Centraliza o conteúdo horizontalmente */
+text-decoration: none; /* Remove a sublinhado do link */
+color: white; /* Cor do texto do botão */
+position: relative; /* Torna o label posicionável */
+transform: translateY(-240px);
+width: 200px !important;
+height: 100px !important;
+margin-left: 60px;
+}
+
+/*Parte 2*/
+
+.linha-separadora-roxaa2 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -250px;
+}
+
+.avali {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -230px;
+  margin-left: 20px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.estrelas2 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -304px; /* Mova para cima (use um valor negativo) */
+left: 300px;
+color: gold;
+}
+
+.numeroavali {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -377px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.imgpfp {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -380px;
+  margin-left: 40px;
+}
+
+.usu2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -450px;
+  margin-left: 90px;
+  color: #3d348b;
+
+}
+
+.estrelas3 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -526px; /* Mova para cima (use um valor negativo) */
+left: 200px;
+color: gold;
+}
+
+.avatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+  color: #3d348b;
+}
+
+.paisagem {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+}
+
+.paisagem5 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -625px;
+  margin-left: 140px;
+}
+
+.imgpfp2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 90px;
+}
+
+.lolja {
+background-color: hsl(246, 46%, 37%);
+color: white;
+font-size: 22px;
+padding: 1px 1px;
+width: 40px;
+border-radius: 10px;
+top: -660px;
+margin-left: 140px;
+position: relative;
+height: 50px;
+}
+
+.loljatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -660px;
+  margin-left: 120px;
+  color: #3d348b;
+}
+
+.coment {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -630px;
+  margin-left: 160px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.linha-separadora-roxaa3 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+}
+
+.recent {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 209px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.Subvitrine2 {
+top: -610px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row22 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.row23 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.produto22 {
+width: 100px;
+padding: 20px;
+margin: 0 10px;
+border: 1px solid #7678ED;
+text-align: center;
+border-radius: 20px;
+margin-top: -130px;
+}
+
+.produto22 img {
+max-width: 100%;
+margin-bottom: 10px;
+}
+
+.produto22 h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.produto22 p {
+font-size: 14px;
+}
+
+.maiss {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: 770px;
+  margin-left: 250px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.botoeis-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.botao-roxo {
+background-color: #3d348b;
+color: white;
+padding: 50px 90px;
+border: none;
+border-radius: 5px;
+margin-top: 900px;
+font-weight: bold;
+font-size: 28px;
+}
+
+.botao-rosa {
+background-color: #7678ED;
+color: white;
+padding: 33px 70px;
+border: none;
+font-size: 28px;
+border-radius: 5px;
+font-weight: bold;
+margin-top: 900px;
+}
+/*Editar perfil*/
+
+.imgdeperfils {
+  transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 230px;
+  margin-top: 60px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  #imagemExibida {
+    width: 100px; /* Tamanho desejado da imagem */
+    height: 100px; /* Tamanho desejado da imagem */
+    border-radius: 50%; /* Para tornar a imagem redonda */
+    display: flex;
+    
+  position: absolute;
+              justify-content: center;
+              align-items: center;
+              margin: -100;
+  
+  }
+  
+  input[type="text2"],
+  input[type="text3"],
+  input[type="email2"],
+  input[type="password2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  input[type="submit2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  .buttinn {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (altura x largura) */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Transforma o cursor em uma mão ao passar o mouse */
+  }
+  
+  .branquin {
+    margin-bottom: 200px;
+    color: white;
+  }
+  
+  .botao-add2 {
+    padding: 10px 80px; /* Define o preenchimento interno do botão */
+    font-size: 16px; /* Define o tamanho da fonte */
+    background-color: #7678ED; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    margin-left: -73px;
+    right: 150px;
+    margin-top: 190px;
+    position: absolute;
+    transform: translateY(-44px);
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+    outline: none;
+  }
+  
+  /*usuario*/
+  
+  .retangulin  {
+      width: 527px;
+      height: 100px;
+      background-color: #7678ed;
+  }
+  
+  
+  .pfpimg {
+    transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 60px;
+  margin-top: 10px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  .ususu {
+    margin-left: 150px;
+  margin-top: 4px;
+  position: absolute;
+  font-size: 25px;
+  color: #3d348b;
+  }
+  
+  .descri {
+    margin-left: 150px;
+  margin-top: 35px;
+  position: absolute;
+  font-size: 22px;
+  color: #7678ED;
+  }
+  
+  .transpari {
+      background: transparent;
+      border: 2px solid #3d348b;
+      color: #3d348b;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin-top: 100px;
+      cursor: pointer;
+      margin-left: 35px;
+      border-radius: 5px;
+  
+  }
+  
+  .envi {
+  position: absolute;
+  font-size: 22px;
+  margin-left: 110px;
+  margin-top: 20px;
+  }
+  
+  .envid {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 93px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .prep {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 300px;
+  margin-top: 45px;
+  color: #7678ED;
+  }
+  
+  .empre {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 270px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .compri {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 155px;
+    margin-top: 80px;
+  }
+  
+  .maais {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 240px;
+    margin-top: -20px;
+  }
+  
+  .linha-separadora-roxa3 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 50px;
+  }
+  
+  .linha-separadora-roxa5 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 190px;
+    position: relative;
+  }
+  
+  .branquin2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  /* Privacidade*/
+
+ 
+
+/* Estilo para os títulos "Privacidade e Termos de Uso" e "Termos de Uso" */
+
+.titulo-priv {
+
+  font-size: 24px; /* Tamanho da fonte */
+
+  color: #3d348b; /* Cor do texto */
+
+  margin-top: 20px; /* Espaço superior */
+
+}
+
+ 
+
+/* Estilo para os subtítulos */
+
+.subtitulo-priv {
+
+  font-size: 20px;
+
+  color: #3d348b;
+
+  margin-top: 10px;
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+
+}
+
+ 
+
+/* Estilo para os parágrafos de texto */
+
+.lista-priv {
+
+  font-size: 16px;
+
+  color: #333;
+
+  margin-top: 10px;
+
+}
+
+ 
+
+/* Estilo para as listas não ordenadas */
+
+.lista-priv2 ul {
+
+  list-style-type: disc; /* Estilo do marcador da lista */
+
+  margin-left: 20px; /* Espaço à esquerda */
+
+  padding-left: 20px; /* Espaço interno à lista */
+
+  color: #333;
+
+}
+
+ 
+
+/* Estilo para os itens da lista */
+
+.lista-priv2 li {
+
+  margin-top: 5px;
+
+}
+
+ 
+
+#privtexto {
+
+  font-size: 16px; /* Tamanho da fonte */
+
+  color: #333; /* Cor do texto */
+
+  line-height: 1.5; /* Espaçamento entre as linhas */
+
+  margin-top: 20px; /* Espaço superior */
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+
+}
+}
+
+@media (min-width: 961px), (min-width: 1025px) {
+
+  #Home {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #Header_home {
+    background-color: #3D348B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #Logo img {
+    height: 30px;
+    width: auto;
+  }
+
+  .pesquisa {
+    position: relative;
+  }
+
+  .pesquisa input {
+    border-radius: 20px;
+    padding: 8px 250px 10px 20px;
+    border: none;
+    font-size: 20px;
+    
+  }
+
+  .pesquisa button {
+    position: absolute;
+    top: 53%;
+    right: 5px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .pesquisa button img {
+    height: 25px;
+    width: auto;
+  }
+
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #3D348B;
+    min-width: 160px;
+    top: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -10px;
+    border-radius: 10px;
+
+
+  }
+
+  .submenu a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .submenu ul {
+    list-style-type: none;
+  }
+
+  .submenu a img {
+    margin-right: 8px;
+  }
+
+  .submenu a:hover {
+    background-color: #f1f1f1;
+  }
+
+  #menuBotao {
+    cursor: pointer;
+  }
+
+  .submenu.show {
+    display: block;
+  }
+
+  .carousel {
+
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    top: 10px
+  }
+
+  .slide {
+    display: none;
+    position: relative;
+    top: 10px;
+  }
+
+  .slide img {
+    
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-color: 0 0 10px #3D348B;
+
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background-color: #3D348B;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+
+  .destaques {
+    text-align: center;
+  }
+
+  .recentes {
+
+
+    text-align: center;
+  }
+
+  .subtitulo-home {
+
+
+    color: #3D348B;
+
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    text-align: center;
+
+    position: relative;
+    top: 5px;
+  }
+
+  .fundin {
+
+
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #90e0ef;
+
+
+    width: 157px;
+  }
+
+
+
+  footer {
+    background-color: #E1ECDD;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .cor-texto-rodape {
+    color: #124559;
+    text-decoration: none;
+  }
+
+  .rodinha {
+    display: grid;
+    grid-template-columns: 80% 40%;
+    width: 400px;
+    justify-content: center;
+    position: relative;
+    left: 215px;
+  }
+
+  .subtitulo-rodape {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+  .lista-rodape {
+    list-style-type: none;
+  }
+
+  .nini {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .direito p {
+    width: 350px;
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    left: 30%;
+  }
+
+
+  /*Cadastro e login */
+
+  .homecad {
+    width: 60px;
+    position: relative;
+    left: 40px;
+    top: 40px;
+  }
+
+
+
+  label {
+    display: block;
+    margin-bottom: px;
+    font-weight: bold;
+
+  }
+
+  .roxo {
+    background-color: #3D348B;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 400px;
+    padding: 5px;
+    border: 5px solid #BBBCEA;
+    border-radius: 200px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    position: relative;
+    left: 55px;
+    font-size: 28px;
+    top: 690px;
+
+  }
+
+  .enviar {
+    background-color: #3D348B;
+    color: #F1FAEE;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 700px;
+    left: 140px;
+    font-size: 40px;
+
+  }
+
+  .Texto {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 38px;
+    text-align: center;
+    color: #3D348B;
+    position: relative;
+    top: 70px;
+
+
+  }
+
+  .fundo {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 50px;
+    position: relative;
+    box-sizing: border-box;
+    top: 650px;
+    width: 985px;
+    height: 925px;
+    left: 200px;
+  }
+
+  .fundo2 {
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    background: #F1FAEE;
+    border-radius: 30px;
+    position: relative;
+    box-sizing: border-box;
+    top: 60px;
+    width: 500px;
+    height: 540px;
+    left: 230px;
+  }
+
+  .sub {
+    position: relative;
+    top: -600px;
+  }
+
+  .sub2 {
+    position: relative;
+    top: -600px;
+  }
+
+  .Entrar {
+    position: relative;
+    top: 450px;
+    font-size: 50px;
+    left: 400px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #3D348B;
+
+  }
+
+  .Entrar2 {
+    position: relative;
+    top: -50px;
+    font-size: 50px;
+    left: 0px;
+    font-family: 'Lexend';
+    font-style: normal;
+    color: #BBBCEA;
+    font-size: 30px;
+    text-align: center;
+
+  }
+
+  #lilas {
+    color: #3D348B;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    font-size: 30px;
+  }
+
+  /*carrinho*/
+
+  .titulo-carr {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3D348B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+  }
+
+
+  .carrinho-produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    left: 20px;
+    top: 7px;
+  }
+
+  .imagem-produto {
+    margin-right: 20px;
+  }
+
+  .imagem-produto img {
+    width: 120px;
+    height: 166px;
+  }
+
+  #item-name {
+    color: #7678ED;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+  }
+
+  #preco {
+    font-weight: bold;
+    color: #3D348B;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  #quantidade {
+    width: 20%;
+    border-radius: 5px;
+    border-color: #3D348B;
+
+  }
+
+  #botao-carrinho {
+    border-radius: 5px;
+    background-color: #7678ED;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+
+  .resumo {
+
+
+    background-color: #D6DBEC;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .total-titulo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #3D348B;
+  }
+
+  .total-valor {
+
+    margin-top: 10px;
+    color: #3D348B;
+    position: relative;
+    top: -5px;
+  }
+
+  .checkout-cta {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /*Finalização*/
+
+  .Imagemredondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 200px;
+  }
+
+  .Texto-finalização {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    color: #3d348b;
+    margin-top: 50px;
+    font-size: 28px;
+  }
+
+  /*configuraçao*/
+
+  #configuracao {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .config {
+    color: #3d348b;
+
+  }
+
+  #titulo-config {
+    text-align: center;
+
+  }
+
+  #subti-config {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    background-color: #bbbcea;
+    color: #3d348b;
+    padding: 11px;
+  }
+
+  #ul-confi {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #li-config {
+    margin-bottom: 10px;
+    color: #7678ed;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  #a-confi {
+    color: #3d348b;
+    text-decoration: none;
+  }
+
+  #a-confi:hover {
+    text-decoration: underline;
+  }
+
+  .excluir {
+    color: #ed7676;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  .roxoclaro {
+    color: #3D348B;
+    text-decoration: none;
+    text-decoration: underline;
+    position: relative;
+    left: 20px;
+  }
+
+  /*Vender na nix*/
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  #header {
+    color: #3D348B;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #content {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  #labelvender {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #input-vender {
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: #3D348B;
+    position: relative;
+    left: 20px;
+  }
+
+  #botãoconfi {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 20px;
+
+
+  }
+
+  #botãoconfi:hover {
+    background-color: #7678ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #back-button {
+    position: relative;
+    top: 15px;
+    left: 5px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  #p-vender {
+    color: #7678ED;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /*Cartões*/
+
+  .button-container {
+    text-align: center;
+  }
+
+  #botão-adcionar {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-color: #3D348B;
+    position: relative;
+    top: 5px;
+  }
+
+  #botão-adcionar a {
+    text-decoration: none;
+    color: #3D348B;
+  }
+
+  #casinha-cartoes {
+    border: none;
+  }
+
+  /*Adcionar cartão*/
+
+  .adccartao {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .form-grupo {
+    margin-bottom: 15px;
+  }
+
+  #titulo-adccar {
+
+    margin-top:10px;
+  margin-bottom: -15px;
+border-bottom: 1px solid #ccc;
+padding-bottom: 10px;
+background-color: #bbbcea;
+color: #3d348b;
+padding: 11px;
+
+  }
+
+  #card-number {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  #card-name {
+    width: 97%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+}
+  
+#cvv {
+  width: 20%;
+  padding: 5px;
+  font-size: 16px;
+  height: 40px; 
+  position: relative;
+  top: -113px;
+}
+
+  #expiry-date {
+    width: 20%;
+    padding: 5px;
+    font-size: 16px;
+    height: 40px; 
+    position: relative;
+    top: -113px;
+  }
+
+  #Button-cartão-adc {
+    background-color: #7678ED;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+    left: 25%;
+  }
+
+  /*Minha loja*/
+
+  .nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    color: #3d348b;
+    font-size: 24px;
+    position: relative;
+    bottom: -250px;
+  }
+
+  .caixinha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 260px;
+
+  }
+
+  .caixinha img:last-child {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+
+  .caixinha img {
+    width: 16%;
+
+  }
+
+  .palavras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 250px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 17px;
+  }
+
+  .palavras2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -51px;
+    width: 500px;
+    color: #7678ed;
+    justify-content: center;
+    margin-left: 9px;
+  }
+
+  .linhaseparada {
+    border-bottom: 1px solid #bbbcea;
+    border-bottom-width: 1px;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .numeros {
+    display: flex;
+  }
+
+  .numero {
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transform: translateX(60px);
+    background-color: #d6dbec;
+  }
+
+  .palavras3 {
+    display: flex;
+
+  }
+
+  .word {
+    margin-right: 10px;
+    position: relative;
+    left: 65px;
+    color: #3d348b;
+  }
+
+  /*Produtos da loja*/
+
+
+
+  /* Rodapé site*/
+
+  .TIOL {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #3D348B;
+    font-size: 20px;
+
+  }
+/*perfil*/
+
+.profile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#username {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#edit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#edit-button:hover {
+  background-color: #0056b3;
+}
+
+
+/*confrimar pedido*/
+
+.fundoroxinho {
+color: #000;
+font-size: 17px;
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-weight: bold;
+transform: translateY(-28px);
+}
+
+.primeira-roxa {
+color: #3d348b; /* Cor da primeira linha */
+}
+
+.visu {
+position: absolute;
+top: 1px; /* Distância do topo */
+left: 229px;
+color: #7678ed;
+}
+
+.conteudo {
+width: 140px; /* Define a largura da imagem em pixels */
+height: auto;
+border-radius: 10px;
+float: left; /* Define a imagem para flutuar à esquerda */
+margin-right: 20px; /* Adiciona uma margem à direita da imagem para o espaço entre a imagem e o texto */
+}
+
+.numerozin {
+background-color: #003380;
+color: white;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+width: 170px; /* Largura desejada */
+height: 20px;
+}
+
+.palavraitem {
+color: #7678ed;
+background-clip: content-box;
+padding: 10px;
+font-size: 17px;
+font-weight: bold;
+width: 170px; /* Largura desejada */
+height: 20px;
+position: absolute;
+left: 134px;
+}
+
+.fundoroxinho2 {
+color: #3D348B; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+font-size: 17px;
+margin-top: 100px;
+font-weight: bold;
+}
+
+.precin {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 340px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.fundoroxinho3 {
+color: #3d348b; 
+background-color: #bbbcea;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: left;
+margin-top: 10px; /* Ajuste o valor conforme necessário */
+font-weight: bold;
+font-size: 17px;
+}
+
+.seta {
+position: relative; /* Ou position: absolute, dependendo do contexto */
+  top: -35px; /* Mova para cima (use um valor negativo) */
+  left: 370px; /* Mova para a direita */
+  padding-bottom: -900px;
+  font-weight: bold;
+
+}
+
+/*editar perfil*/
+
+.profile-form {
+max-width: 300px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.edit-button {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.edit-button:hover {
+background-color: #0056b3;
+}
+
+/*historico*/
+
+/*confirma*/
+
+.check-button3 {
+display: inline-block;
+position: relative;
+width: 20px;
+height: 20px;
+background-color: #fff;
+border: 2px solid #3d348b;
+border-radius: 50%;
+cursor: pointer;
+margin-left: 149px;
+transform: translateY(-90px);
+}
+
+.check-button3 input[type="checkbox"] {
+display: none;
+}
+
+.check-button3 .checkmark {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 16px;
+height: 16px;
+background-color: #3d348b; /* Cor de fundo quando estiver marcado */
+border-radius: 50%;
+display: none;
+}
+
+.check-button3 input[type="checkbox"]:checked + .checkmark {
+display: block;
+transform: translate(-50%, -50%) scale(1.1);
+}
+
+.cartaocredi {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: -26px;
+}
+
+.movimento {
+margin-left: -149px;
+margin-top: 100px;
+position: absolute;
+}
+
+.movimento2 {
+position: absolute;
+margin-left: 23px;
+margin-top: 10px;
+}
+
+.movimento3 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 75px;
+margin-top: 14px;
+}
+
+.total1 {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -47px;
+}
+
+.subtotall {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.subpreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -32px;
+}
+
+.linha-separadora-roxa {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+}
+
+.taxa {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: 29px;
+}
+
+.taxapreco {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+margin-top: -27px;
+}
+
+.tota11roxo {
+background-color: #BBBCEA;
+background-size: -100px;
+}
+
+.tota11 {
+color: #3D348B;
+font-size: 22px;
+font-weight: bold;
+margin-left: 18px;
+margin-top: -10px;
+}
+
+.precotot {
+color: #3D348B;
+font-size: 17px;
+font-weight: bold;
+margin-left: 318px;
+height: 50px;
+}
+
+.final {
+color: #F1FAEE;
+font-size: 17px;
+font-weight: bold;
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
+background-color: #3D348B; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remova a borda do botão */
+border-radius: 5px; /* Borda arredondada */
+cursor: pointer; /* Cursor de apontar */
+font-size: 19px;
+margin-left: 318px;
+margin-top: -27px;
+height: 50px;
+}
+
+/* Estilo CSS para as divs .imagemcentral e .textocentral */
+.imagemcentral img {
+max-width: 100%;
+height: auto;
+display: block;
+margin-top: 80px;
+margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
+
+.textocentral {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+margin-top: 20px; /* Espaçamento superior para o texto */
+}
+
+.textocentral p {
+font-size: 18px;
+color: #333; /* Cor do texto */
+}
+
+.container {
+display: flex;
+align-items: center;
+}
+
+#campoTexto {
+margin-right: 10px;
+}
+
+.botao-add {
+padding: 10px 80px; /* Define o preenchimento interno do botão */
+font-size: 16px; /* Define o tamanho da fonte */
+background-color: #7678ED; /* Cor de fundo do botão */
+color: #fff; /* Cor do texto do botão */
+border: none; /* Remove a borda do botão */
+margin-left: -73px;
+right: 150px;
+margin-top: 60px;
+position: absolute;
+transform: translateY(-44px);
+border-radius: 4px; /* Adiciona bordas arredondadas */
+cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+outline: none;
+}
+
+.aumentar {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+.aumentar2 {
+text-align: center;
+color: #3D348B;
+font-weight: bold;
+}
+
+/*produtos*/
+
+.produtosub {
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+  left: 240px;
+}
+
+.button4 {
+width: 50px;
+height: 50px;
+background-color: #c59898;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button5 {
+width: 50px;
+height: 50px;
+background-color: #c4c4c4;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button6 {
+width: 50px;
+height: 50px;
+background-color: #000000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.button7 {
+width: 50px;
+height: 50px;
+background-color: #ff0000;
+border-radius: 50%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.selecionarcor{
+font-size: 30px;
+top: -100;
+position: relative;
+color: #3D348B;
+transform: translateY(-140px);
+}
+
+.checklist {
+display: flex;
+flex-wrap: wrap;
+}
+
+.hidden-checkbox {
+display: none;
+}
+
+.buttonn {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.button4,
+.button5,
+.button6,
+.button7 {
+display: inline-block;
+padding: 10px;
+margin: 5px;
+border: 2px solid #ccc;
+cursor: pointer;
+}
+
+.hidden-checkbox:checked + label {
+border: 4px solid #333; /* Cor da borda quando selecionado */
+color: #fff; /* Cor do texto quando selecionado */
+}
+
+
+.abaitem {
+font-size: 35px;
+position: relative;
+color: #7678ED;
+top: 43px;
+}
+
+.abapreco {
+font-size: 35px;
+color: #3D348B;
+}
+
+.estrelas {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -84px; /* Mova para cima (use um valor negativo) */
+left: 290px;
+color: gold;
+}
+
+.numeroava {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -159px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.buttonn {
+width: 50px;
+height: 50px;
+background-color: #3d348b;
+border-radius: 15%; /* Torna o botão redondo */
+color: #fff;
+text-align: center;
+line-height: 50px;
+margin: 10px;
+cursor: pointer;
+display: inline-block;
+transform: translateY(-140px);
+}
+
+.produto2 {
+border: 2px solid #7678ED;
+padding: 5px;
+padding-right: -90px;
+border-radius: 20px;
+font-size: 24px;
+color: #3d348b;
+transform: translateY(-140px);
+background-color: #acacce;
+}
+
+.moveracima {
+position: relative;
+transform: translateY(-20px);
+}
+
+.textofrete {
+font-size: 26px;
+transform: translateY(-130px);
+}
+
+.verde {
+color: chartreuse;
+}
+
+.bloco {
+display: block;
+}
+
+.dataestimada {
+font-size: 26px;
+transform: translateY(-247px);
+position: relative;
+left: 280px;
+}
+
+#botaoaba {
+width: 370px; /* Define a largura do botão */
+height: 50px; /* Define a altura do botão */
+font-size: 26px;
+transform: translateY(-160px);
+left: -680px;
+border: 2px solid #7678ed; /* Cor da borda */
+background-color: #F1FAEE; /* Cor de fundo */
+color: #3d348b;
+}
+
+/* Estilizando o botão de alternância */
+#botaoaba {
+display: none; /* Oculta o input original */
+}
+
+/* Estilizando o rótulo (label) para parecer um botão */
+label {
+background-color: #3d348b;
+color: white;
+cursor: pointer;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);
+}
+
+/* Estilizando o rótulo quando o input está marcado */
+#botaoaba:checked + label {
+background-color: #7678ED;
+color: white;
+font-size: 27px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo */
+#conteudo {
+display: none;
+padding: 10px;
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+font-size: 25px;
+position: relative; /* Torna o label posicionável */
+transform: translateY(-130px);}
+
+/* Estilizando o conteúdo quando o input está marcado */
+#botaoaba:checked + label + #conteudo {
+display: block;
+}
+
+.botao-imagem {
+display: inline-block;
+padding: 10px 20px; /* Espaçamento interno do botão */
+border: none; /* Remove a borda padrão do link */
+cursor: pointer; /* Muda o cursor para indicar que é clicável */
+text-align: center; /* Centraliza o conteúdo horizontalmente */
+text-decoration: none; /* Remove a sublinhado do link */
+color: white; /* Cor do texto do botão */
+position: relative; /* Torna o label posicionável */
+transform: translateY(-240px);
+width: 200px !important;
+height: 100px !important;
+margin-left: 60px;
+}
+
+/*Parte 2*/
+
+.linha-separadora-roxaa2 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -250px;
+}
+
+.avali {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -230px;
+  margin-left: 20px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.estrelas2 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -304px; /* Mova para cima (use um valor negativo) */
+left: 300px;
+color: gold;
+}
+
+.numeroavali {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -377px; /* Mova para cima (use um valor negativo) */
+left: 460px;
+color: #3d348b;
+}
+
+.imgpfp {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -380px;
+  margin-left: 40px;
+}
+
+.usu2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -450px;
+  margin-left: 90px;
+  color: #3d348b;
+
+}
+
+.estrelas3 {
+font-size: 35px;
+position: relative;
+position: relative; /* Certifique-se de que o elemento tenha uma posição relativa ou absoluta */
+top: -526px; /* Mova para cima (use um valor negativo) */
+left: 200px;
+color: gold;
+}
+
+.avatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+  color: #3d348b;
+}
+
+.paisagem {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -560px;
+  margin-left: 90px;
+}
+
+.paisagem5 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -625px;
+  margin-left: 140px;
+}
+
+.imgpfp2 {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 90px;
+}
+
+.lolja {
+background-color: hsl(246, 46%, 37%);
+color: white;
+font-size: 22px;
+padding: 1px 1px;
+width: 40px;
+border-radius: 10px;
+top: -660px;
+margin-left: 140px;
+position: relative;
+height: 50px;
+}
+
+.loljatext {
+font-size: 24px;
+position: relative; /* Torna o elemento posicionável */
+  top: -660px;
+  margin-left: 120px;
+  color: #3d348b;
+}
+
+.coment {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -630px;
+  margin-left: 160px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.linha-separadora-roxaa3 {
+height: 1px; /* Define a altura da linha */
+background-color: #7678ED; /* Cor roxa para a linha separadora */
+margin: 20px 0;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+}
+
+.recent {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: -610px;
+  margin-left: 209px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.Subvitrine2 {
+top: -610px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row22 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.row23 {
+display: flex;
+justify-content: center;
+margin-bottom: -600px;
+}
+
+.produto22 {
+width: 100px;
+padding: 20px;
+margin: 0 10px;
+border: 1px solid #7678ED;
+text-align: center;
+border-radius: 20px;
+margin-top: -130px;
+}
+
+.produto22 img {
+max-width: 100%;
+margin-bottom: 10px;
+}
+
+.produto22 h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.produto22 p {
+font-size: 14px;
+}
+
+.maiss {
+font-size: 28px;
+position: relative; /* Torna o elemento posicionável */
+  top: 770px;
+  margin-left: 250px;
+  color: #3D348B;
+  font-weight: bold;
+}
+
+.botoeis-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.botao-roxo {
+background-color: #3d348b;
+color: white;
+padding: 50px 90px;
+border: none;
+border-radius: 5px;
+margin-top: 900px;
+font-weight: bold;
+font-size: 28px;
+}
+
+.botao-rosa {
+background-color: #7678ED;
+color: white;
+padding: 33px 70px;
+border: none;
+font-size: 28px;
+border-radius: 5px;
+font-weight: bold;
+margin-top: 900px;
+}
+
+/*Editar perfil*/
+
+.imgdeperfils {
+  transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 230px;
+  margin-top: 60px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  #imagemExibida {
+    width: 100px; /* Tamanho desejado da imagem */
+    height: 100px; /* Tamanho desejado da imagem */
+    border-radius: 50%; /* Para tornar a imagem redonda */
+    display: flex;
+    
+  position: absolute;
+              justify-content: center;
+              align-items: center;
+              margin: -100;
+  
+  }
+  
+  input[type="text2"],
+  input[type="text3"],
+  input[type="email2"],
+  input[type="password2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  input[type="submit2"] {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: 160px;
+  }
+  
+  .buttinn {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (altura x largura) */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Transforma o cursor em uma mão ao passar o mouse */
+  }
+  
+  .branquin {
+    margin-bottom: 200px;
+    color: white;
+  }
+  
+  .botao-add2 {
+    padding: 10px 80px; /* Define o preenchimento interno do botão */
+    font-size: 16px; /* Define o tamanho da fonte */
+    background-color: #7678ED; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    margin-left: -73px;
+    right: 150px;
+    margin-top: 190px;
+    position: absolute;
+    transform: translateY(-44px);
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+    outline: none;
+  }
+  
+  /*usuario*/
+  
+  .retangulin  {
+      width: 527px;
+      height: 100px;
+      background-color: #7678ed;
+  }
+  
+  
+  .pfpimg {
+    transform: scale(3);
+  transform-origin: 0, 0;
+  margin-left: 60px;
+  margin-top: 10px;
+  position: absolute;
+  font-size: 10px;
+  }
+  
+  .ususu {
+    margin-left: 150px;
+  margin-top: 4px;
+  position: absolute;
+  font-size: 25px;
+  color: #3d348b;
+  }
+  
+  .descri {
+    margin-left: 150px;
+  margin-top: 35px;
+  position: absolute;
+  font-size: 22px;
+  color: #7678ED;
+  }
+  
+  .transpari {
+      background: transparent;
+      border: 2px solid #3d348b;
+      color: #3d348b;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin-top: 100px;
+      cursor: pointer;
+      margin-left: 35px;
+      border-radius: 5px;
+  
+  }
+  
+  .envi {
+  position: absolute;
+  font-size: 22px;
+  margin-left: 110px;
+  margin-top: 20px;
+  }
+  
+  .envid {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 93px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .prep {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 300px;
+  margin-top: 45px;
+  color: #7678ED;
+  }
+  
+  .empre {
+    position: absolute;
+  font-size: 22px;
+  margin-left: 270px;
+  margin-top: 100px;
+  color: #7678ED;
+  }
+  
+  .compri {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 155px;
+    margin-top: 80px;
+  }
+  
+  .maais {
+    color: #3d348b;
+    position: absolute;
+    font-size: 26px;
+    margin-left: 240px;
+    margin-top: -20px;
+  }
+  
+  .linha-separadora-roxa3 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 50px;
+  }
+  
+  .linha-separadora-roxa5 {
+    height: 1px; /* Define a altura da linha */
+    background-color: #7678ED; /* Cor roxa para a linha separadora */
+    margin: 20px 0;
+    margin-top: 190px;
+    position: relative;
+  }
+  
+  .branquin2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  /* Privacidade*/
+
+ 
+
+/* Estilo para os títulos "Privacidade e Termos de Uso" e "Termos de Uso" */
+
+.titulo-priv {
+
+  font-size: 24px; /* Tamanho da fonte */
+
+  color: #3d348b; /* Cor do texto */
+
+  margin-top: 20px; /* Espaço superior */
+
+}
+
+ 
+
+/* Estilo para os subtítulos */
+
+.subtitulo-priv {
+
+  font-size: 20px;
+
+  color: #3d348b;
+
+  margin-top: 10px;
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+
+}
+
+ 
+
+/* Estilo para os parágrafos de texto */
+
+.lista-priv {
+
+  font-size: 16px;
+
+  color: #333;
+
+  margin-top: 10px;
+
+}
+
+ 
+
+/* Estilo para as listas não ordenadas */
+
+.lista-priv2 ul {
+
+  list-style-type: disc; /* Estilo do marcador da lista */
+
+  margin-left: 20px; /* Espaço à esquerda */
+
+  padding-left: 20px; /* Espaço interno à lista */
+
+  color: #333;
+
+}
+
+ 
+
+/* Estilo para os itens da lista */
+
+.lista-priv2 li {
+
+  margin-top: 5px;
+
+}
+
+ 
+
+#privtexto {
+
+  font-size: 16px; /* Tamanho da fonte */
+
+  color: #333; /* Cor do texto */
+
+  line-height: 1.5; /* Espaçamento entre as linhas */
+
+  margin-top: 20px; /* Espaço superior */
+
+  margin-bottom: 20px; /* Espaço inferior */
+
+    margin-left: 20px; /* Espaço à esquerda */
+
+    margin-right: 20px; /* Espaço à direita */
+}
+}
