@@ -178,8 +178,8 @@ router.get("/sucesso", function (req, res) {
   res.render("pages/sucesso");
 });
 
-router.get("/vendernanix", function (req, res) {
-    res.render("pages/vendernanix");
+router.get("/vendernanix2", function (req, res) {
+    res.render("pages/vendernanix2");
 });
 
 router.post("/cadastro",
