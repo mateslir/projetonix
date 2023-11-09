@@ -13,21 +13,21 @@
 </head>
 </head>
 <body id="Home">
-  
+
     <header id="Header_home">
       <h1 id="Logo">
         <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
-        
+
       </h1>
-    
+
       <div class="pesquisa">
-    
+
         <input type="text" placeholder="Busque aqui.">
         <button type="button">
           <img src="imagens/Group 2 (1).png" alt="Psquisa">
         </button>
       </div>
-    
+
       <div class="menu">
         <img id="menuBotao" src="imagens/hamburguer.png" onclick="changeImage()">
 
@@ -43,7 +43,7 @@
       <h2 class="cart-title">Seu carrinho</h2>
       <!--content-->
       <div class="cart-content">
-      
+
       </div>
       <!--total-->
       <div class="total">
@@ -55,9 +55,33 @@
     <!--Close Cart-->
   <i class="bx bx-x" id="close-cart"></i>
     </div>
-    
+
         </header>
+        <main>
+
+          <div id="perfil">
+              <form action="/perfil" method="post" enctype="multipart/form-data">
+                  <h1>Meu Perfil</h1>
+                  <p>
+                      <input type="text" name="usuar" id="usuar" placeholder="Nome" value="<%= valores.autenticado.autenticado%>" class="<%= avisoErro.autenticado.autenticado%>" 
+                      <span> <%= msgErro.nome_usu %> </span> <b>*</b>
+                  </p>
+
+                  <p>
+                      <input type="submit" value="Alterar dados perfil" />
+                  </p>
+              </form>
+
+          </div>
+
+      </main>
+  </body>
+
+  </html>
+        <body>
         <input type="file" name="imagem-perfil_usu" id="imagem-perfil_usu" onchange="loadImg()">
         <img class="img-perfil"  id="img-preview" src="imagens/Group 9 (1).png">
+
+      </body>
         <script src="js/Script.js"></script>
     </html>
