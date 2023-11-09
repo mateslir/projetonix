@@ -1,37 +1,51 @@
-
 <!DOCTYPE html>
-<html lang="pt-br"></html>
+<html lang="pt-br">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width-device-width", institial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/cadastro.css">
-        <link rel="stylesheet" href="js/Script.js">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js"></script>
-        <title>Cadastro</title>
-        </head>
-<header>
-  <a href="/">
-    <img class="homecad" src="imagens/Home icon.png">
-  </a>
-</header>
-<body class="roxo">
+</html>
 
-  <div class="fundo">
-  <h1 class="Texto">Cadastrar-se</h1>
+<head>
+  <meta charset="utf-8">
  
-	<form class="sub" id="cadastroForm" action="/cadastro" method="post">
-    <input type="text" id="email" name="usuar" placeholder="Usuario" required>
-		<input type="email" id="usuar_email" name="email" placeholder="E-mail" required>
-		<input type="password" id="senha" name="senha" placeholder="Senha" >
-    <input type="password" id="consenha" name="consenha" placeholder="Confirmar Senha" >
-		<button class="enviar">Confirmar</button>
-	  </form>
-    <h2 class="Entrar">Possui uma conta?<a href="/login"> Entrar.</a></h2>
-    <label class="checkbox-label">
-      <input type="checkbox" id="concordo" name="concordo"> Eu concordo com osﾠ<a href="/termos"> termos de uso.</a>
-  </label>
-  </div>
-	</body>
-  </html>
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="js/Script.js">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js"></script>
+
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <img class="homecard" src="imagens/Home icon.png">
+    </a>
+  </header>
+
+  <main>
+    <div>
+      <h1 class="titulo">Cadastrar-se</h1>
+
+      <form id="cadastroForm" action="/cadastro" method="post">
+
+        <input type="text" id="email" name="usuar" placeholder="Usuario" required>
+        <input type="email" id="usuar_email" name="email" placeholder="E-mail" required>
+        <input type="password" id="senha" name="senha" placeholder="Senha">
+        <input type="password" id="consenha" name="consenha" placeholder="Confirmar Senha">
+        <button class="enviar">Confirmar</button>
+
+      </form>
+
+
+      <h2 class="entrar">Possui uma conta?<a href="/login"> Entrar.</a></h2>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="concordo" name="concordo"> Eu concordo com os <a href="/termos"> termos de uso.</a>
+      </label>
+
+    </div>
+  </main>
+</body>
+
+</html>
