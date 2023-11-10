@@ -53,6 +53,50 @@ router.get("/abaproduto", function (req, res) {
   res.render("pages/abaproduto");
 });
 
+router.get("/abaproduto1", function (req, res) {
+  res.render("pages/abaproduto1");
+});
+
+router.get("/abaproduto2", function (req, res) {
+  res.render("pages/abaproduto2");
+});
+
+router.get("/abaproduto3", function (req, res) {
+  res.render("pages/abaproduto3");
+});
+
+router.get("/abaproduto4", function (req, res) {
+  res.render("pages/abaproduto4");
+});
+
+router.get("/abaproduto5", function (req, res) {
+  res.render("pages/abaproduto5");
+});
+
+router.get("/abaproduto6", function (req, res) {
+  res.render("pages/abaproduto6");
+});
+
+router.get("/abaproduto7", function (req, res) {
+  res.render("pages/abaproduto7");
+});
+
+router.get("/abaproduto8", function (req, res) {
+  res.render("pages/abaproduto8");
+});
+
+router.get("/abaproduto9", function (req, res) {
+  res.render("pages/abaproduto9");
+});
+
+router.get("/abaproduto10", function (req, res) {
+  res.render("pages/abaproduto10");
+});
+
+router.get("/abaproduto11", function (req, res) {
+  res.render("pages/abaproduto11");
+});
+
 router.get("/adccartao", function (req, res) {
     res.render("pages/adccartao");
 });
@@ -193,7 +237,6 @@ function (req, res) {
   if (!errors.isEmpty()) {
     console.log(errors);
     // return res.render("pages/html", { erros: errors, dados: req.body });
-    return res.json(errors);
   }
 
   var dadosForm = {
@@ -268,15 +311,16 @@ router.post(
     const erros = validationResult(req);
     if (!erros.isEmpty()) {
       console.log(erros);
-      return res.render("pages/login", { listaErros: erros })
+      return res.render("pages/login", { listaErros: erros, dadosNotificacao: null })
     }
     console.log(req.session);
     if (req.session.autenticado != null) {
+
       //mudar para página de perfil quando existir
       console.log(`Logado com sucesso`)
       res.redirect("/perfil");
     } else {
-      res.render("pages/login", { listaErros: erros })
+      res.render("pages/login", { listaErros: erros})
     }
 
   });
@@ -288,7 +332,7 @@ router.post(
   });
   
   router.get("/sair", limparSessao, function (req, res) {
-    res.redirect("/index2");
+    res.redirect("/");
   });
 
 module.exports = router;
