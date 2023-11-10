@@ -40,8 +40,8 @@ app.get("/successo", (req, res) => {
   res.render("pages/sucesso.ejs", { root: "./app/views/pages" });
 });
 // Cancel
-app.get("/", (req, res) => {
-  res.render("pages/index.ejs", { root: "./app/views/pages" });
+app.get("/cancelar", (req, res) => {
+  res.render("pages/cancelar.ejs", { root: "./app/views/pages" });
 });
 // Stripe
 let stripeGateway = stripe(process.env.stripe_api);
