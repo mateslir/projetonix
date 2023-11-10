@@ -81,6 +81,6 @@ app.post("/stripe-checkout", async (req, res) => {
 });
 
 
-app.listen(3300, () => {
-  console.log("listening on port 3300;");
+app.listen(port, () => {
+  console.log("listening on port 3300", port);
 });
