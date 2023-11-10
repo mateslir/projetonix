@@ -70,7 +70,7 @@ app.post("/stripe-checkout", async (req, res) => {
     payment_method_types: ["boleto", "card"],
     mode: "payment",
     success_url: `${DOMAIN}/sucesso`,
-    cancel_url: `${DOMAIN}/cancelar`,
+    cancel_url: `${DOMAIN}/`,
     line_items: lineItems,
     billing_address_collection: "required",
     shipping_address_collection: {
