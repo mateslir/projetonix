@@ -40,8 +40,8 @@ app.get("/successo", (req, res) => {
   res.render("pages/sucesso.ejs", { root: "./app/views/pages" });
 });
 // Cancel
-app.get("/", (req, res) => {
-  res.render("pages/index.ejs", { root: "./app/views/pages" });
+app.get("/cancelar", (req, res) => {
+  res.render("pages/cancelar.ejs", { root: "./app/views/pages" });
 });
 // Stripe
 let stripeGateway = stripe(process.env.stripe_api);
@@ -69,8 +69,8 @@ app.post("/stripe-checkout", async (req, res) => {
   const session = await stripeGateway.checkout.sessions.create({
     payment_method_types: ["boleto", "card"],
     mode: "payment",
-    success_url: `/sucesso`,
-    cancel_url: `/cancelar`,
+    success_url: `${DOMAIN}/sucesso`,
+    cancel_url: `${DOMAIN}/cancelar`,
     line_items: lineItems,
     billing_address_collection: "required",
     shipping_address_collection: {
@@ -81,6 +81,6 @@ app.post("/stripe-checkout", async (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log("listening on port 3300", port);
+app.listen(3300, () => {
+  console.log("listening on port 3300;");
 });
