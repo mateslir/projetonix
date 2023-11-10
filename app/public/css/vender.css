@@ -1,0 +1,60 @@
+/* Apply styles to the main container */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* 100% of the viewport height */
+    background-color: #f5f5f5; /* Set your desired background color */
+}
+
+/* Apply styles to the forms container */
+.fundo3 {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
+
+/* Apply styles to the heading within the forms container */
+.fundo3 h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    color:#3D348B;
+}
+.fundo3 button {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #3D348B;
+    color:white;
+    border: #3D348B;
+    margin-left: 120px;
+    border-radius: 100px;
+}
+
+/* Apply styles to input elements within the forms container */
+.fundo3 input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 3px solid #BBBCEA; /* Optional: Add a border for better visibility */
+    border-radius: 100px;
+}
+
+/* Apply additional styles to the text input */
+.fundo3 input[type="text"],
+.fundo3 input[type="number"] {
+    /* Add specific styles for text and number inputs */
+}
+
+/* Media query for screens with a maximum width of 480 pixels */
+@media screen and (max-width: 480px) {
+    /* Adjust styles for smaller screens if needed */
+    .fundo3 {
+        width: 80%; /* Adjust the width as needed for smaller screens */
+    }
+}
