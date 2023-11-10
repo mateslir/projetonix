@@ -40,8 +40,8 @@ app.get("/successo", (req, res) => {
   res.render("pages/sucesso.ejs", { root: "./app/views/pages" });
 });
 // Cancel
-app.get("/cancelar", (req, res) => {
-  res.render("pages/cancelar.ejs", { root: "./app/views/pages" });
+app.get("/", (req, res) => {
+  res.render("pages/index.ejs", { root: "./app/views/pages" });
 });
 // Stripe
 let stripeGateway = stripe(process.env.stripe_api);
@@ -69,8 +69,8 @@ app.post("/stripe-checkout", async (req, res) => {
   const session = await stripeGateway.checkout.sessions.create({
     payment_method_types: ["boleto", "card"],
     mode: "payment",
-    success_url: `${DOMAIN}/sucesso`,
-    cancel_url: `${DOMAIN}/cancelar`,
+    success_url: `/sucesso`,
+    cancel_url: `/cancelar`,
     line_items: lineItems,
     billing_address_collection: "required",
     shipping_address_collection: {
