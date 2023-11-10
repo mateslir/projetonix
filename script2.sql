@@ -16,6 +16,7 @@ senha varchar(60) not null,
 telefone varchar(14) not null,
 foto varchar(150) not null
 );
+
 DROP TABLE IF EXISTS vender_nix;
 create table vender_nix(
 id_vender_nix int primary key auto_increment not null,
@@ -24,6 +25,7 @@ nome_loja varchar(30) not null,
 cpf varchar(11) not null,
 nome_dono varchar(30) not null
 );
+
 DROP TABLE IF EXISTS cartao;
 create table cartao(
 id_cartao int primary key auto_increment not null,
@@ -33,6 +35,7 @@ card_name varchar(30) not null,
 expiry_date date not null,
 cvv varchar(3) not null
 );
+
 DROP TABLE IF EXISTS perfil_usuario;
 create table perfil_usuario(
 id_perfil_usuario int primary key auto_increment not null,
