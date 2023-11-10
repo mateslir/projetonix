@@ -1,5 +1,7 @@
 const express = require("express");
+require('dotenv').config()
 const app = express();
+
 
 app.use(express.static("app/public"));
 
@@ -8,6 +10,9 @@ app.set("views", "./app/views");
 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
+
+var session = require("express-session");
+const port = process.env.PORT || '3300';
 
 var session = require("express-session");
 app.use(
@@ -21,6 +26,6 @@ app.use(
 var rotas = require("./app/routes/router.cjs");
 app.use("/", rotas);
 
-app.listen(3300, () =>{
-    console.log(`Servidor ouvindo na porta 3300`);
+app.listen(port, () =>{
+    console.log(`Servidor ouvindo na porta 3300`, port);
 });
