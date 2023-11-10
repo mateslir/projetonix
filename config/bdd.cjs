@@ -7,12 +7,12 @@ module.exports = function(){
     host: "viaduct.proxy.rlwy.net",
     user: "root",
     password: "e-gAeCGc123C5hhbbH34A4H5hhAG4a-F",
-    database: "railway",
+    database: "Tables",
     port: 57514
   });
 
   connection.connect();
   return connection
-  
+
   }
   
