@@ -69,8 +69,8 @@ app.post("/stripe-checkout", async (req, res) => {
   const session = await stripeGateway.checkout.sessions.create({
     payment_method_types: ["boleto", "card"],
     mode: "payment",
-    success_url: `/sucesso`,
-    cancel_url: `/cancelar`,
+    success_url: `${DOMAIN}/sucesso`,
+    cancel_url: `${DOMAIN}/`,
     line_items: lineItems,
     billing_address_collection: "required",
     shipping_address_collection: {
