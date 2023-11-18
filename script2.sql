@@ -1,8 +1,4 @@
-ALTER USER 'root'@'localhost' 
-IDENTIFIED 
-with 
-mysql_nativepassword	
-BY 'nix123';
+
 
 create database IF NOT EXISTS NixWear;
 use NixWear;
@@ -34,16 +30,6 @@ card_number varchar(16) not null,
 card_name varchar(30) not null,
 expiry_date date not null,
 cvv varchar(3) not null
-);
-
-DROP TABLE IF EXISTS perfil_usuario;
-create table perfil_usuario(
-id_perfil_usuario int primary key auto_increment not null,
-usuario_id_usuario	int,
-foreign key (user_name) references usuario(user_name),
-foreign key (email) references usuario(email),
-foreign key (senha) references usuario(senha),
-foreign key (telefone) references usuario(telefone)
 );
 
 DROP TABLE IF EXISTS endereco;

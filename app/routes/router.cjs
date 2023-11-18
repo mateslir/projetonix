@@ -178,8 +178,12 @@ router.get("/pedidoconfirmado", function (req, res) {
 });
 
 router.get("/perfil",verificarUsuAutenticado, function (req, res) {
-req.session.login= req.query.login;
-  res.render("pages/perfil",{login:req.session.autenticado.login, autenticado:req.session.autenticado});
+  if (req.session.autenticado.autenticado == null){
+    res.redirect("/login")
+  }else{
+    res.render("pages/perfil",{login:req.session.autenticado.login, autenticado:req.session.autenticado});
+  }
+  
 });
 
 router.get("/preparos", function (req, res) {
