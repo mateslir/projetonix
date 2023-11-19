@@ -13,6 +13,9 @@ var conexao = fabricaDeConexao();
 var UsuarioDAL = require("../models/UsuarioDAL.cjs");
 var usuarioDAL = new UsuarioDAL(conexao);
 
+var ProdutosDAL = require("../models/ProdutosDAL.cjs");
+var produtosDAL = new ProdutosDAL(conexao);
+
 var { verificarUsuAutenticado, limparSessao, gravarUsuAutenticado,
   verificarUsuAutorizado } = require("../models/autenticador-middleware.cjs");
 
@@ -22,7 +25,7 @@ const path = require('path');
 // Definindo o diretório de armazenamento das imagens
 var storagePasta = multer.diskStorage({
   destination: (req, file, callBack) => {
-    callBack(null, './app/public/imagens/Group 9 (1).png/') // diretório de destino  
+    callBack(null, './app/public/imagens/produto') // diretório de destino  
   },
   filename: (req, file, callBack) => {
     callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
@@ -33,9 +36,6 @@ var storagePasta = multer.diskStorage({
 var upload = multer({ storage: storagePasta });
 
 const { body, validationResult } = require("express-validator");
-router.get("/", function (req, res) {
-    res.render("pages/index");
-});
 
 router.get("/index2", function (req, res) {
   res.render("pages/index2");
@@ -118,7 +118,7 @@ router.get("/centralajuda", function (req, res) {
 });
 
 router.get("/configuracao", function (req, res) {
-    res.render("pages/configuracao");
+    res.render("pages/configuracao", {autenticado: req.session.autenticado});
 });
 
 router.get("/confirmarpedido", function (req, res) {
@@ -127,10 +127,6 @@ router.get("/confirmarpedido", function (req, res) {
 
 router.get("/devolucao", function (req, res) {
     res.render("pages/devolucao");
-});
-
-router.get("/editarperfil", function (req, res) {
-  res.render("pages/editarperfil");
 });
 
 router.get("/enderecos", function (req, res) {
@@ -185,6 +181,13 @@ router.get("/perfil",verificarUsuAutenticado, function (req, res) {
   }
   
 });
+
+router.get("/editarperfil",verificarUsuAutenticado, function (req, res) {
+    res.render("pages/editarperfil",{login:req.session.autenticado.login,autenticado:req.session.autenticado});
+  
+});
+
+
 
 router.get("/preparos", function (req, res) {
     res.render("pages/preparos");
@@ -329,13 +332,286 @@ router.post(
 
   });
   
-  
+  router.post("/publicarproduto",
+  upload.single('img_produto'),
+  async function (req, res) {
+    const formProduto = {
+      nome_produto: req.body.nome_produto,
+      descricao_produto: req.body.descricao_produto,
+      preco: req.body.preco,
+      loja: req.body.loja,
+      img_produto: req.body.img_produto,
+      id_vendedor: req.session.autenticado.id
+    }
+    if (!req.file) {
+      console.log("Falha no carregamento");
+    } else {
+      caminhoArquivo = "img/produto/" + req.file.filename;
+      formProduto.img_produto = caminhoArquivo
+      // console.log(req.file)
+    }
+    try {
+      let insert = await produtosDAL.create(formProduto);
+      console.log(insert);
+      res.render("pages/addproduto", {
+        listaErros: null, dadosNotificacao: {
+          titulo: "Produto Publicado!", mensagem: "Produto publicado com o id " + insert.insertId + "!", tipo: "success"
+        }, valores: req.body
+      })
+    } catch (e) {
+      res.render("pages/addproduto", {
+        listaErros: erros, dadosNotificacao: {
+          titulo: "Erro ao publicar!", mensagem: "Verifique os valores digitados!", tipo: "error"
+        }, valores: req.body
+      })
+    }
+  }
 
-  router.get("/", verificarUsuAutenticado, function (req, res) {
-    res.render("pages/index", req.session.autenticado);
+)
+
+router.get("/addproduto", function (req, res) {
+  res.render("pages/addproduto", {autenticado: req.session.autenticado});
+});
+
+  router.post("/perfil", upload.single('img_perfil'),
+  // body("nome")
+  //   .isLength({ min: 3, max: 50 }).withMessage("Mínimo de 3 letras e máximo de 50!"),
+  // body("cpf")
+  //   .isLength({ min: 8, max: 30 }).withMessage("8 a 30 caracteres!"),
+  // body("email")
+  //   .isEmail().withMessage("Digite um e-mail válido!"),
+  // body("telefone")
+  //   .isLength({ min: 12, max: 13 }).withMessage("Digite um telefone válido!"),
+  // verificarUsuAutorizado([1, 2, 3], "pages/login"),
+  async function (req, res) {
+    const erros = validationResult(req);
+    console.log(erros)
+    if (!erros.isEmpty()) {
+      return res.render("pages/perfil", { listaErros: erros, dadosNotificacao: null, valores: req.body, autenticado: req.body.autenticado})
+    }
+    try {
+      var dadosForm = {
+        user_name: req.body.user_name,
+        email: req.body.email,
+        telefone: req.body.telefone,
+        foto: req.body.img_perfil,
+      };
+      console.log("senha: " + req.body.senha)
+      if (req.body.senha != "") {
+        dadosForm.senha = bcrypt.hashSync(req.body.senha, salt);
+      }
+      if (!req.file) {
+        console.log("Falha no carregamento");
+      } else {
+        caminhoArquivo = "imagens/produto/" + req.file.filename;
+        dadosForm.foto = caminhoArquivo
+      }
+      console.log(dadosForm);
+
+      let resultUpdate = await usuarioDAL.update(dadosForm, req.session.autenticado.id);
+      if (!resultUpdate.isEmpty) {
+        if (resultUpdate.changedRows == 1) {
+          var result = await usuarioDAL.findID(req.session.autenticado.id);
+          var autenticado = {
+            autenticado: result[0].user_name,
+            id_usuario: result[0].id_usuario,
+            email: result[0].email,
+            telefone: result[0].telefone,
+            img_perfil: result[0].foto
+          };
+          req.session.autenticado = autenticado;
+          var campos = {
+            autenticado: result[0].user_name, email: result[0].email,
+            img_perfil: result[0].foto,
+            telefone: result[0].telefone, senha: ""
+          }
+          res.render("pages/perfil", { listaErros: null, dadosNotificacao: { titulo: "Perfil! atualizado com sucesso", mensagem: "", tipo: "success" }, autenticado: campos });
+        }
+      }
+    } catch (e) {
+      console.log(e)
+      res.render("pages/perfil", { listaErros: erros, dadosNotificacao: { titulo: "Erro ao atualizar o perfil!", mensagem: "Verifique os valores digitados!", tipo: "error" }, autenticado: req.body })
+    }
+
   });
   
+
+
+
+  async function buscarProdutosCarrinho(req) {
+    return new Promise((resolve, reject) => {
+      const id_usuario = req.session.autenticado ? req.session.autenticado.id : null;
+      
+      if (!id_usuario) {
+        // Se nenhum usuário estiver logado, resolve com uma lista vazia de produtos
+        resolve([]);
+      } else {
+        const sql = 'SELECT id_produto_nix FROM carrinho WHERE id_usuario = ?';
+        
+        conexao.query(sql, [id_usuario], (err, result) => {
+          if (err) {
+            reject(err);
+          } else {
+            // Verifica se há produtos no carrinho
+            if (result.length === 0) {
+              // Se não houver produtos, resolve com uma lista vazia
+              resolve([]);
+            } else {
+              const produtosCarrinho = result.map(row => row.id_produto_nix);
+  
+              const queryProdutos = `SELECT * FROM produto_nix WHERE id_produto_nix IN (?)`;
+  
+              conexao.query(queryProdutos, [produtosCarrinho], (err, resultProdutos) => {
+                if (err) {
+                  reject(err);
+                } else {
+                  resolve(resultProdutos);
+                }
+              });
+            }
+          }
+        });
+      }
+    });
+  }
+  
+
+
+  router.get("/addcarrinho/:id_produto/:id", function (req, res){
+    var query = conexao.query (
+      "insert into carrinho set ?",
+      {id_produto_nix: req.params.id_produto,
+      id_usuario: req.params.id
+      },
+      function (error, results, fields) {
+        if (error) throw error;
+      }
+    )
+    res.redirect("/");
+  })
+
+  router.get("/excluirprodutocart/:id", function (req, res) {
+    var query = conexao.query(
+      "DELETE FROM carrinho WHERE ?",
+      { id_produto_nix: req.params.id },
+      function (error, results, fields) {
+        if (error) throw error;
+      }
+    );
+    res.redirect("/");
+  });
+
+  router.get("/produto/:id_produto_nix", async function (req, res) {
+    try {
+      result = await produtosDAL.findID(req.params.id_produto_nix)
+      console.log(result)
+      res.render("pages/abaproduto", { produtos: result, autenticado: req.session.autenticado, login: req.res.autenticado })
+  
+    } catch {
+      res.redirect("/")
+    }
+  })
+
+  router.get("/painelvendedor",  async function (req, res) {
+    try {
+  
+      let pagina = req.query.pagina == undefined ? 1 : req.query.pagina;
+  
+      inicio = parseInt(pagina - 1) * 10
+      results = await produtosDAL.FindPage(inicio, 10);
+      totReg = await produtosDAL.TotalReg();
+      console.log(results)
+  
+      totPaginas = Math.ceil(totReg[0].total / 10);
+  
+      var paginador = totReg[0].total <= 10 ? null : { "pagina_atual": pagina, "total_reg": totReg[0].total, "total_paginas": totPaginas }
+  
+      console.log("auth --> ")
+      console.log(req.session.autenticado)
+      res.render("pages/painelvendedor", { produtos: results, paginador: paginador, autenticado: req.session.autenticado, login: req.res.autenticado });
+    } catch (e) {
+      console.log(e); // console log the error so we can see it in the console
+      res.json({ erro: "Falha ao acessar dados" });
+    }
+  
+  
+    //    res.render("pages/adm", {usuarios: results, retorno: null, erros: null, autenticado: req.session.autenticado})
+  });
+
+  router.get("/excluirproduto/:id", function (req, res) {
+    var query = conexao.query(
+      "DELETE FROM produto_nix WHERE ?",
+      { id_produto_nix: req.params.id },
+      function (error, results, fields) {
+        if (error) throw error;
+      }
+    );
+    res.redirect("/");
+  });
+  
+  
+  
+
+// Rota para renderizar a página inicial
+router.get("/", verificarUsuAutenticado, async function (req, res) {
+  try {
+    const produtosCarrinho = await buscarProdutosCarrinho(req);
+
+    // Lógica para buscar os produtos para exibir na página inicial
+    let pagina = req.query.pagina == undefined ? 1 : req.query.pagina;
+    inicio = parseInt(pagina - 1) * 10
+    resultsprod = await produtosDAL.FindPage(inicio, 10);
+    totReg = await produtosDAL.TotalReg();
+    totPaginas = Math.ceil(totReg[0].total / 10);
+    var paginador = totReg[0].total <= 10 ? null : { "pagina_atual": pagina, "total_reg": totReg[0].total, "total_paginas": totPaginas }
+
+    res.render("pages/index", { produtos: resultsprod, paginador: paginador, autenticado: req.session.autenticado, login: req.res.autenticado, produtosCarrinho: produtosCarrinho });
+  } catch (e) {
+    console.log(e);
+    res.json({ erro: "Falha ao acessar dados" });
+  }
+});
+
+
+  router.get("/adm",  async function (req, res) {
+    try {
+  
+      let pagina = req.query.pagina == undefined ? 1 : req.query.pagina;
+  
+      inicio = parseInt(pagina - 1) * 5
+      results = await usuarioDAL.FindPage(inicio, 5);
+      totReg = await usuarioDAL.TotalReg();
+      console.log(results)
+  
+      totPaginas = Math.ceil(totReg[0].total / 5);
+  
+      var paginador = totReg[0].total <= 5 ? null : { "pagina_atual": pagina, "total_reg": totReg[0].total, "total_paginas": totPaginas }
+  
+      console.log("auth --> ")
+      console.log(req.session.autenticado)
+      res.render("pages/adm", { usuarios: results, paginador: paginador, autenticado: req.session.autenticado });
+    } catch (e) {
+      console.log(e); // console log the error so we can see it in the console
+      res.json({ erro: "Falha ao acessar dados" });
+    }
+  
+  
+    //    res.render("pages/adm", {usuarios: results, retorno: null, erros: null, autenticado: req.session.autenticado})
+  });
+  
+  
   router.get("/sair", limparSessao, function (req, res) {
+    res.redirect("/");
+  });
+
+  router.get("/excluir/:id", function (req, res) {
+    var query = db.query(
+      "DELETE FROM usuario WHERE ?",
+      { id_usuario: req.params.id },
+      function (error, results, fields) {
+        if (error) throw error;
+      }
+    );
     res.redirect("/");
   });
 

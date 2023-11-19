@@ -4,35 +4,35 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Produto-Calça com Olhos</title>
-	<link rel="stylesheet" type="text/css" href="css/produto.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="js/Script.js">
+	<link rel="stylesheet" type="text/css" href="../css/produto.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../js/Script.js">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="Home">
   
 <header id="Header_home">
   <h1 id="Logo">
-    <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
+    <a href="/"><img src="../imagens/nx2 1.png" alt="Logo"></a>
     
   </h1>
 
   <div class="pesquisa">
     <input type="text" placeholder="Busque aqui.">
     <button type="button">
-      <img src="imagens/Group 2 (1).png" alt="Psquisa">
+      <img src="../imagens/Group 2 (1).png" alt="Psquisa">
     </button>
   </div>
 
   <div class="menu">  
-    <img id="menuBotao" src="imagens/hamburguer.png" onclick="changeImage()">
+    <img id="menuBotao" src="../imagens/hamburguer.png" onclick="changeImage()">
     
    
     <div class="submenu">
       <ul>
         <li><a class="tamanho" id="cart-icon"><i class='bx bx-cart' id="cart-icon" data-quantitiy="0"></i>Carrinho</a></li>
-        <li><a href="/perfil"><img src="imagens/Perfil Hamburguer.png">Perfil</a></li>
-        <li><a href="/configuracao"><img src="imagens/gearw 1.png">Config.</a></li>
+        <li><a href="/perfil"><img src="../imagens/Perfil Hamburguer.png">Perfil</a></li>
+        <li><a href="/configuracao"><img src="../imagens/gearw 1.png">Config.</a></li>
       </ul>
     </div>
         <!--cart-->
@@ -54,14 +54,16 @@
         </div>
   </header>
 <main>
+  <% produtos.forEach(function(produto){ %>
   <div class="product-box"> 
   <img
-  src="imagens/roupa.jpeg"
+  src="../<%produto.img_produto%>"
   class="product-img"
   />
 </div>
-  <h2 class="product-title">Calça com Olhos</h2>
-  <span class="price">R$49.99</span>
+
+  <h2 class="product-title"><%=produto.nome_produto%></h2>
+  <span class="price">R$<%=produto.preco%></span>
   <i class="bx bx-shopping-bag add-cart">     Adicionar ao carrinho</i>
   <p class="s1">Selecione o tamanho:</p>
   <div class="container">
@@ -75,8 +77,10 @@
     <label class=label for="gg">GG</label>
 </div>
 <div class="cinza">
-<p>Utilizamos apenas os melhores materiais disponíveis para garantir que não apenas pareça incrível, mas também seja confortável e durável. Com opções de tecidos variados, desde seda e lã até couro de alta qualidade. O prazo de envio é de 15 (quinze) a 20 (vinte) dias úteis, não incluso o prazo dos correios ou transportadora</p>
-</div>
+  <p><%=produto.descricao_produto%></p>
+  </div>
+<% }); %>
+
 </main>
 <body>
   <div class="cinza2">
@@ -85,25 +89,25 @@
 </div>
 <div class="subvitrine">
   <div class="produto">
-    <img src="imagens/roupa.jpeg" alt="Celular 1">
+    <img src="../imagens/roupa.jpeg" alt="Celular 1">
     <h3>CALÇA JEANS COM OLHOS</h3>
     <h4>R$ 69,99</h4>
   </div>
 
   <div class="produto">
-    <img src="imagens/roupa1.jpeg" alt="Celular 1">
+    <img src="../imagens/roupa1.jpeg" alt="Celular 1">
     <h3>CALÇA COM ANIMES</h3>
     <h4>R$ 99,99</h4>
   </div>
 
   <div class="produto">
-    <img src="imagens/roupa2.jpeg" alt="Celular 1">
+    <img src="../imagens/roupa2.jpeg" alt="Celular 1">
     <h3>BLAZE CUSTOMIZADO</h3>
     <h4>R$ 79,99</h4>
   </div>
 
   <div class="produto">
-    <img src="imagens/roupa3.jpeg" alt="Celular 1">
+    <img src="../imagens/roupa3.jpeg" alt="Celular 1">
     <h3>CALÇA CARGO COM CORRENTES </h3>
     <h4>R$ 109,99</h4>
   </div>
@@ -223,22 +227,22 @@
 
       <li class="lista-rodape">
           <a href="" class="cor-texto-rodape">
-              <img src="imagens/visa.png">
+              <img src="../imagens/visa.png">
           </a>
       </li>
 
       <li class="lista-rodape">
           <a href="" class="cor-texto-rodape">
-              <img src="imagens/mastercard.png">
+              <img src="../imagens/mastercard.png">
           </a>
       </li>
       <li class="lista-rodape">
           <a href="" class="cor-texto-rodape">
-              <img src="imagens/elo.png">
+              <img src="../imagens/elo.png">
       </li>
       <li class="lista-rodape">
           <a href="" class="cor-texto-rodape">
-              <img src="imagens/paypal.png">
+              <img src="../imagens/paypal.png">
           </a>
       </li>
       </div>
@@ -253,6 +257,6 @@
 </footer>
   
 </body>
-   <script src="js/Script.js"></script>
-  <script src="js/carrinho.js"></script>
-  <script src="js/cart.js"></script>
+   <script src="../js/Script.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/cart.js"></script>

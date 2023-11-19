@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+
+        <section class="all-prod">
+
+            <div>
+                <span>Olá, <%= autenticado.autenticado %>!
+                        <h2>Bem vindo ao seu painel do vendedor,
+                            gerencie todos os seus produtos.
+                        </h2>
+                </span>
+
+            </div>
+
+            <% produtos.forEach(function(produto){ %>
+            <div class="prod">
+                <img src="<%=produto.img_produto%>" alt="imagem do produto">
+                <span><%=produto.nome_produto %></span>
+                <span><%=produto.descricao_produto %></span>
+
+                <div>
+                    <span>R$ <%=produto.preco_produto %></span>
+                    <button onclick="<%=" window.location='/excluirproduto/"+ produto.id_produto_nix %>'" >
+                        delete
+                    </button>
+                </div>
+
+            </div>
+            <% }); %>
+
+        </section>
+
+    </main>
+</body>
+</html>

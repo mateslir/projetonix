@@ -56,9 +56,16 @@
     </div>
         </header>
         <div class="usuari">
-        <img src="imagens/Group 9 (1).png"> 
+        <img src="<%= autenticado.img_perfil%>"> 
         <h1 ><%= autenticado.autenticado%></h1>
         <h2>Descrição</h2>
+        <span><%=autenticado.email%></span><br>
+        <span><%=autenticado.telefone%></span><br>
+        <a href="/editarperfil">
+          <button>Editar Perfil</button>
+        </a>
+        
+        
         </div>
         <hr>
         <main>

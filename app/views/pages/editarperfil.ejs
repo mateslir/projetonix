@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form action="/perfil" method="post" enctype="multipart/form-data">
+            <span>Usuario</span><br>
+            <input type="text" value="<%=autenticado.autenticado%>" name="user_name"><br>
+            <span>email</span><br>
+            <input type="text" value="<%=autenticado.email%>" name="email" ><br>
+            <span>Trocar senha</span><br>
+            <input type="password" name="senha"><br>
+            <span>Prencher caso queira trocar a senha</span><br>
+            <span>Numero</span><br>
+            <input type="number" value="<%=autenticado.telefone%>" name="telefone" id=""><br>
+            <span>imagem de perfil</span><br>
+            <input type="file" name="img_perfil" value="<%autenticado.img_perfil%>"><br>
+            <img src="<%autenticado.img_perfil%>" alt=""><br>
+            <button>Atualizar</button>
+        </form>
+    </section>
+</body>
+</html>
