@@ -17,12 +17,15 @@ module.exports = class UsuarioDAL {
 
     findUserEmail(camposForm) {
         return new Promise((resolve, reject) => {
-            this.conexao.query("SELECT * FROM usuario WHERE user_name = ? or email = ?", [camposForm.user_name, camposForm.email], function (error, elements) {
-                if (error) {
-                    return reject(error);
-                }
-                return resolve(elements);
-            });
+            this.conexao.query("SELECT * FROM usuario WHERE email = ?",
+            [camposForm.email],
+                function (error, elements) {
+                    if (error) {
+                        return reject(error);
+                    }
+
+                    return resolve(elements);
+                });
         });
     };
     findID(id) {

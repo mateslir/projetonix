@@ -1,7 +1,5 @@
 var express = require("express");
 var router = express.Router();
-var bcrypt = require("bcryptjs");
-var salt = bcrypt.genSaltSync(12);
 var session = require("express-session");
 
 var bcrypt = require("bcryptjs");
@@ -46,7 +44,7 @@ router.get("/termos", function (req, res) {
 });
 
 router.get("/cadastro", function (req, res) {
-    res.render("pages/cadastro");
+    res.render("pages/cadastro", { listaErros: null, dadosNotificacao: null, valors: { "nome": "", "senha": "", "email": "" } });
 });
 
 router.get("/abaproduto", function (req, res) {
@@ -117,7 +115,7 @@ router.get("/centralajuda", function (req, res) {
     res.render("pages/centralajuda");
 });
 
-router.get("/configuracao", function (req, res) {
+router.get("/configuracao", verificarUsuAutorizado([1, 2, 3], "/login"),function (req, res) {
     res.render("pages/configuracao", {autenticado: req.session.autenticado});
 });
 
@@ -154,7 +152,7 @@ router.get("/garantia", function (req, res) {
 });
 
 router.get("/login", function (req, res) {
-    res.render("pages/login");
+    res.render("pages/login", { listaErros: null, dadosNotificacao: null, valors: { "nome": "", "senha": "", "email": "" } });
 });
 
 router.get("/metodosdepaga", function (req, res) {
@@ -182,7 +180,7 @@ router.get("/perfil",verificarUsuAutenticado, function (req, res) {
   
 });
 
-router.get("/editarperfil",verificarUsuAutenticado, function (req, res) {
+router.get("/editarperfil",verificarUsuAutenticado, verificarUsuAutorizado([1, 2, 3], "/login") ,function (req, res) {
     res.render("pages/editarperfil",{login:req.session.autenticado.login,autenticado:req.session.autenticado});
   
 });
@@ -233,38 +231,43 @@ router.get("/vendernanix2", function (req, res) {
     res.render("pages/vendernanix2");
 });
 
+
 router.post("/cadastro",
-
-body("email").isEmail().withMessage("Digite um e-mail válido!"),
-body("usuar").isLength({ min: 8, max: 30 }).withMessage("Nome de usuário deve ter de 8 a 30 caracteres!"),
-body("senha").isStrongPassword().withMessage("A senha deve ter no mínimo 8 caracteres, 1 letra maiúscula, 1 caractere especial e 1 número"),
-
-function (req, res) {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    console.log(errors);
-    // return res.render("pages/html", { erros: errors, dados: req.body });
-  }
-
-  var dadosForm = {
-    email: req.body.email,
-    senha: bcrypt.hashSync(req.body.senha, salt),
-    user_name: req.body.usuar,
-    telefone: "vazio",
-    foto: "vazio"
-};
-
-  conexao.query(
-    "INSERT INTO usuario SET ?",
-    dadosForm,
-    function (error, results, fields) {
-      if (error) throw error;
-      // Neat!
+  body("user_name")
+    .isLength({ min: 3, max: 50 }).withMessage("Mínimo de 3 letras e máximo de 50!"),
+  body("email")
+    .isEmail().withMessage("Digite um e-mail válido!"),
+  body("senha")
+    .isStrongPassword()
+    .withMessage("A senha deve ter no mínimo 8 caracteres, 1 letra maiúscula, 1 caractere especial e 1 número"),
+  async function (req, res) {
+    var dadosForm = {
+      email: req.body.email,
+      senha: bcrypt.hashSync(req.body.senha, salt),
+      user_name: req.body.usuar,
+    };
+    const erros = validationResult(req);
+    // if (!erros.isEmpty()) {
+    //   return res.render("pages/cadastro", { listaErros: erros, dadosNotificacao: {
+    //     titulo: "Erro ao cadastrar!", mensagem: "Verifique os valores digitados!", tipo: "error"
+    //   }, valores: req.body })
+    // }
+    try {
+      let insert = await usuarioDAL.create(dadosForm);
+      console.log(insert);
+      res.render("pages/cadastro", {
+        listaErros: null, dadosNotificacao: {
+          titulo: "Cadastro realizado!", mensagem: "Usuário criado com o id " + insert.insertId + "!", tipo: "success"
+        }, valores: req.body
+      })
+    } catch (e) {
+      res.render("pages/cadastro", {
+        listaErros: erros, dadosNotificacao: {
+          titulo: "Erro ao cadastrar!", mensagem: "Verifique os valores digitados!", tipo: "error"
+        }, valores: req.body
+      })
     }
-  );
-
-  res.redirect("/");
-})
+  });
 
 router.post("/formendereco",
 
@@ -304,33 +307,33 @@ function (req, res) {
 
   res.redirect("/");
 })
+
+
+  router.post(
+    "/login",
+    body("email")
+      .isLength({ min: 4, max: 45 })
+      .withMessage("O nome de usuário/e-mail esta incorreto!"),
+    body("senha")
+      .isStrongPassword()
+      .withMessage("Verifique novamente a senha digitada!"),
   
-router.post(
-  "/login",
-  body("email")
-    .isLength({ min: 4, max: 45 })
-    .withMessage("O nome de usuário/e-mail deve ter de 8 a 45 caracteres"),
-  body("senha").isStrongPassword()
-    .withMessage("A senha deve ter no mínimo 8 caracteres (mínimo 1 letra maiúscula, 1 caractere especial e 1 número)"),
-
-  gravarUsuAutenticado(usuarioDAL, bcrypt),
-  function (req, res) {
-    const erros = validationResult(req);
-    if (!erros.isEmpty()) {
-      console.log(erros);
-      return res.render("pages/login", { listaErros: erros, dadosNotificacao: null })
-    }
-    console.log(req.session);
-    if (req.session.autenticado != null) {
-
-      //mudar para página de perfil quando existir
-      console.log(`Logado com sucesso`)
-      res.redirect("/perfil");
-    } else {
-      res.render("pages/login", { listaErros: erros})
-    }
-
-  });
+    gravarUsuAutenticado(usuarioDAL, bcrypt),
+    function (req, res) {
+      const erros = validationResult(req);
+      if (!erros.isEmpty()) {
+        return res.render("pages/login", { listaErros: erros, dadosNotificacao: null })
+      }
+      if (req.session.autenticado != null) {
+        res.render("pages/login", {
+          listaErros: null, dadosNotificacao: {
+            titulo: "Login realizado!", mensagem: "Usuário logado com sucesso", tipo: "success"
+          }, valores: req.body
+        })
+      } else {
+        res.render("pages/login", { listaErros: erros, dadosNotificacao: { titulo: "Erro ao logar!", mensagem: "Usuário e/ou senha inválidos!", tipo: "error" } })
+      }
+    });
   
   router.post("/publicarproduto",
   upload.single('img_produto'),
@@ -512,7 +515,7 @@ router.get("/addproduto", function (req, res) {
     }
   })
 
-  router.get("/painelvendedor",  async function (req, res) {
+  router.get("/painelvendedor", verificarUsuAutorizado([2, 3], "/perfil"), async function (req, res) {
     try {
   
       let pagina = req.query.pagina == undefined ? 1 : req.query.pagina;
@@ -573,7 +576,7 @@ router.get("/", verificarUsuAutenticado, async function (req, res) {
 });
 
 
-  router.get("/adm",  async function (req, res) {
+  router.get("/adm",  verificarUsuAutorizado([3], "/perfil"),async function (req, res) {
     try {
   
       let pagina = req.query.pagina == undefined ? 1 : req.query.pagina;
@@ -605,14 +608,14 @@ router.get("/", verificarUsuAutenticado, async function (req, res) {
   });
 
   router.get("/excluir/:id", function (req, res) {
-    var query = db.query(
+    var query = conexao.query(
       "DELETE FROM usuario WHERE ?",
       { id_usuario: req.params.id },
       function (error, results, fields) {
         if (error) throw error;
       }
     );
-    res.redirect("/");
+    res.redirect("/sair");
   });
 
 module.exports = router;

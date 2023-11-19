@@ -6,6 +6,12 @@
         <meta name="viewport" content="width-device-width", institial-scale=1.0">
         <link rel="stylesheet" href="css/cadastro.css">
         <title>login</title>
+        <script src="js/notify.js"></script>
+        <!-- CSS -->
+        <!-- https://github.com/simple-notify/simple-notify -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css" />
+        <!-- JS -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js"></script>
         </head>
         <header>
           <a href="/">
@@ -13,6 +19,40 @@
           </a>
         </header>        
 <body class="roxo">
+  <% 
+    let msgErro = {"email":"", "senha":""};
+    let avisoErro = {"email":"", "senha":""};
+    if(listaErros){
+        listaErros.errors.forEach(function(itemErro){
+            if(itemErro.path == "email"){
+                avisoErro.email = "erro";
+                msgErro.email += " "+itemErro.msg;
+                %>
+                <script>
+                    notify("Erro no preenchimento","Verifique o campo email<br><%= itemErro.msg%>", "error", "center")                        
+                </script>
+                <%
+            }
+            if(itemErro.path == "senha"){
+                avisoErro.senha = "erro";
+                msgErro.senha = itemErro.msg;
+                %>
+                <script>
+                    notify("Erro no preenchimento","Verifique o campo senha<br><%= itemErro.msg%>", "error", "center")                        
+                </script>
+                <%                
+            }
+            
+        })
+    }
+    if (dadosNotificacao) { %>
+        <script>
+                notify("<%= dadosNotificacao.titulo%>","<%= dadosNotificacao.mensagem%>", "<%= dadosNotificacao.tipo%>", "center")
+                if("<%= dadosNotificacao.tipo %>" == "success"){
+                    setTimeout(function(){window.location="/"}, 3000)
+                }                        
+        </script>
+    <% } %>
 
   <div class="fundo2">
   <h1 class="Texto">Log-in</h1>

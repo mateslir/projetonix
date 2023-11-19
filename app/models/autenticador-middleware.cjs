@@ -54,7 +54,7 @@ function verificarUsuAutorizado(tipoPermitido, destinoFalha) {
             tipoPermitido.find(function (element) { return element == req.session.autenticado.tipo }) != undefined) {
             next();
         } else {
-            res.render(destinoFalha);
+            res.redirect(destinoFalha);
         }
     };
 }
