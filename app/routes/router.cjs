@@ -115,8 +115,14 @@ router.get("/centralajuda", function (req, res) {
     res.render("pages/centralajuda");
 });
 
-router.get("/configuracao", verificarUsuAutorizado([1, 2, 3], "/login"),function (req, res) {
+router.get("/configuracao",function (req, res) {
+  var autenticado = req.session.autenticado.autenticado;
+  if (autenticado == null) {
+    res.redirect('/login')
+  }else {
     res.render("pages/configuracao", {autenticado: req.session.autenticado});
+
+  }
 });
 
 router.get("/confirmarpedido", function (req, res) {

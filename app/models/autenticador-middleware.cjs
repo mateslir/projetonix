@@ -51,7 +51,7 @@ function gravarUsuAutenticado(usuarioDAL, bcrypt) {
 function verificarUsuAutorizado(tipoPermitido, destinoFalha) {
     return (req, res, next) => {
         if (req.session.autenticado.autenticado != null &&
-            tipoPermitido.find(function (element) { return element == req.session.autenticado.tipo }) != undefined) {
+            tipoPermitido.find(function (element) { return element == req.session.autenticado.tipo_usuario }) != undefined) {
             next();
         } else {
             res.redirect(destinoFalha);
