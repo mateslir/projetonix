@@ -34,6 +34,7 @@ function gravarUsuAutenticado(usuarioDAL, bcrypt) {
                         id: results[0].id_usuario,
                         email: results[0].email,
                         telefone: results[0].telefone,
+                        tipo_usuario: results[0].tipo_usuario,
                         img_perfil: results[0].foto
                     };
                 }
@@ -48,10 +49,9 @@ function gravarUsuAutenticado(usuarioDAL, bcrypt) {
         next();
     }
 }
-function verificarUsuAutorizado(tipoPermitido, destinoFalha) {
+function verificarUsuAutorizado(tipoPermitido, destinoFalha){
     return (req, res, next) => {
-        if (req.session.autenticado.autenticado != null &&
-            tipoPermitido.find(function (element) { return element == req.session.autenticado.tipo_usuario }) != undefined) {
+        if (req.session.autenticado.autenticado != null && tipoPermitido.find(function (element) { return element == req.session.autenticado.tipo_usuario }) != undefined ) {
             next();
         } else {
             res.redirect(destinoFalha);

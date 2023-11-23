@@ -186,7 +186,7 @@ router.get("/perfil",verificarUsuAutenticado, function (req, res) {
   
 });
 
-router.get("/editarperfil",verificarUsuAutenticado, verificarUsuAutorizado([1, 2, 3], "/login") ,function (req, res) {
+router.get("/editarperfil",verificarUsuAutenticado,function (req, res) {
     res.render("pages/editarperfil",{login:req.session.autenticado.login,autenticado:req.session.autenticado});
   
 });
@@ -355,7 +355,7 @@ function (req, res) {
     if (!req.file) {
       console.log("Falha no carregamento");
     } else {
-      caminhoArquivo = "img/produto/" + req.file.filename;
+      caminhoArquivo = "imagens/produto/" + req.file.filename;
       formProduto.img_produto = caminhoArquivo
       // console.log(req.file)
     }
@@ -522,26 +522,26 @@ router.get("/addproduto", function (req, res) {
   })
 
   router.get("/painelvendedor", verificarUsuAutorizado([2, 3], "/perfil"), async function (req, res) {
-    try {
+      try {
   
-      let pagina = req.query.pagina == undefined ? 1 : req.query.pagina;
-  
-      inicio = parseInt(pagina - 1) * 10
-      results = await produtosDAL.FindPage(inicio, 10);
-      totReg = await produtosDAL.TotalReg();
-      console.log(results)
-  
-      totPaginas = Math.ceil(totReg[0].total / 10);
-  
-      var paginador = totReg[0].total <= 10 ? null : { "pagina_atual": pagina, "total_reg": totReg[0].total, "total_paginas": totPaginas }
-  
-      console.log("auth --> ")
-      console.log(req.session.autenticado)
-      res.render("pages/painelvendedor", { produtos: results, paginador: paginador, autenticado: req.session.autenticado, login: req.res.autenticado });
-    } catch (e) {
-      console.log(e); // console log the error so we can see it in the console
-      res.json({ erro: "Falha ao acessar dados" });
-    }
+        let pagina = req.query.pagina == undefined ? 1 : req.query.pagina;
+    
+        inicio = parseInt(pagina - 1) * 10
+        results = await produtosDAL.FindPage(inicio, 10);
+        totReg = await produtosDAL.TotalReg();
+        console.log(results)
+    
+        totPaginas = Math.ceil(totReg[0].total / 10);
+    
+        var paginador = totReg[0].total <= 10 ? null : { "pagina_atual": pagina, "total_reg": totReg[0].total, "total_paginas": totPaginas }
+    
+        console.log("auth --> ")
+        console.log(req.session.autenticado)
+        res.render("pages/painelvendedor", { produtos: results, paginador: paginador, autenticado: req.session.autenticado, login: req.res.autenticado });
+      } catch (e) {
+        console.log(e); // console log the error so we can see it in the console
+        res.json({ erro: "Falha ao acessar dados" });
+      }
   
   
     //    res.render("pages/adm", {usuarios: results, retorno: null, erros: null, autenticado: req.session.autenticado})
