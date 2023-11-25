@@ -21,3 +21,7 @@ function changeImage() {
     submenu.classList.toggle("show");
   });
 
+
+  function goBack() {
+    window.history.back();
+}

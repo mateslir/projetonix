@@ -36,7 +36,9 @@
               <li><a href="/perfil"><img src="imagens/Perfil Hamburguer.png">Perfil</a></li>
               <li><a href="/configuracao"><img src="imagens/gearw 1.png">Config.</a></li>
             </ul>
-          </div>
+         </div>
+            <button id="back-button" onclick="goBack()"><a href="/configuracao"></a><img src="imagens/Arrow 12.png" alt=""></button>
+         
                         <!--cart-->
     <div class="cart">
       <h2 class="cart-title">Seu carrinho</h2>
@@ -58,11 +60,13 @@
         <div class="usuari">
         <img src="<%= autenticado.img_perfil%>"> 
         <h1 ><%= autenticado.autenticado%></h1>
-        <h2>Descrição</h2>
-        <span><%=autenticado.email%></span><br>
-        <span><%=autenticado.telefone%></span><br>
+        <h2>Meios de contato</h2>
+        <i class='bx bx-envelope' ></i>
+        <span class="zap"><%=autenticado.email%></span><br>
+        <i class='bx bxl-whatsapp' ></i>
+        <span class="mail"><%=autenticado.telefone%></span><br>
         <a href="/editarperfil">
-          <button>Editar Perfil</button>
+          <i class='bx bxs-edit' ></i>
         </a>
         
         

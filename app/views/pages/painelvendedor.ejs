@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/painelvendedor.css">
+    <title>Paindel Do Vendedor-NixWear</title>
 </head>
-<body>
-    <main>
 
-        <section class="all-prod">
+<body id="Home">
+    <header id="Header_home">
+        <h1 id="Logo">
+            <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
+        </h1>
 
-            <div>
-                <span>Olá, <%= autenticado.autenticado %>!
-                        <h2>Bem vindo ao seu painel do vendedor,
-                            gerencie todos os seus produtos.
-                        </h2>
-                </span>
+        <div class="pesquisa">
+            <input type="text" placeholder="Busque aqui.">
+            <button type="button">
+                <img src="imagens/Group 2 (1).png" alt="Psquisa">
+            </button>
+        </div>
+        <span class="adm">Olá <%= autenticado.autenticado %>!</span><br>
+        <button id="back-button" onclick="goBack()"><a href="/configuracao"></a><img src="imagens/Arrow 12.png"
+                alt=""></button>
+        <main>
 
-            </div>
+           
 
-            <% produtos.forEach(function(produto){ %>
-            <div class="prod">
-                <img src="<%=produto.img_produto%>" alt="imagem do produto">
-                <span><%=produto.nome_produto %></span>
-                <span><%=produto.descricao_produto %></span>
+                <div class="BoasVindas" style="white-space: pre-wrap; width: 300px;">Bem-vindo ao seu painel do vendedor, gerencie todos os seus produtos.</div>
 
-                <div>
-                    <span>R$ <%=produto.preco_produto %></span>
-                    <button onclick="<%=" window.location='/excluirproduto/"+ produto.id_produto_nix %>'" >
+                <a href="/addproduto">
+                <button  class="adc">Adicionar produto</button>
+            </a>  
+
+                <section class="all-prod">
+
+                <% produtos.forEach(function(produto){ %>
+                    <div >
+                        <img src="<%=produto.img_produto%>" alt="imagem do produto">
+                        <span class="NomeProd">
+                            <%=produto.nome_produto %>
+                        </span>
+                        <span class="DescProd">
+                            <%=produto.descricao_produto %>
+                        </span>
+
+                        <div>
+                            <span  class="Preco">R$ <%=produto.preco %></span>
+                            <button onclick="<%=" window.location='/excluirproduto/"+ produto.id_produto_nix %>'" class="del">
                         delete
                     </button>
                 </div>
@@ -38,5 +58,150 @@
         </section>
 
     </main>
+    <footer>
+
+        <div class=" rodinha">
+
+
+                                <nav>
+
+                                    <ul>
+                                        <h3 class="subtitulo-rodape">Atendimento ao cliente</h3>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Central de Ajuda
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Como comprar
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Métodos de Pagamentos
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Garantia
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Devolução e Reembolso
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="#" class="cor-texto-rodape">
+                                                Fale Conosco
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Ouvidoria
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </nav>
+
+
+                                <nav>
+
+                                    <ul>
+                                        <h3><br>Siga-nos</h3>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Instagram
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Twitter
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Facebook
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+
+
+                                <nav>
+
+
+                                    <ul>
+                                        <h3><br>Sobre a Nix</h3>
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Sobre Nós
+                                            </a>
+                                        </li>
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Políticas NIX
+                                            </a>
+                                        </li>
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Políticas de Privacidade
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <ul>
+                                    <nav>
+                                        <h3>Pagamentos</h3>
+
+                                        <div class="nini">
+
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/visa.png">
+                                                </a>
+                                            </li>
+
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/mastercard.png">
+                                                </a>
+                                            </li>
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/elo.png">
+                                            </li>
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/paypal.png">
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </nav>
+                                </ul>
+                        </div>
+                        <div class="direito">
+                            <p>© 2022 NIXwear.Todos os direitos reservados</p>
+                            <p>País e região: Brasil</p>
+                        </div>
+
+                        </footer>
+                        <script src="js/Script.js"></script>
 </body>
+
 </html>

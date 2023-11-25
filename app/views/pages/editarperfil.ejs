@@ -3,25 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/editarperfil.css">
+    <title>Edição de Perfil</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body>
-    <section>
+
+    <body id="Home">    
+  <header id="Header_home">
+    <h1 id="Logo">
+      <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
+    </h1>
+
+    <div class="pesquisa">
+      <input type="text" placeholder="Busque aqui.">
+      <button type="button">
+        <img src="imagens/Group 2 (1).png" alt="Psquisa">
+      </button>
+    </div>
+
+    <h1 class="titulo">Editar Perfil</h1>
+   
+    <section class="forms">
         <form action="/perfil" method="post" enctype="multipart/form-data">
-            <span>Usuario</span><br>
-            <input type="text" value="<%=autenticado.autenticado%>" name="user_name"><br>
-            <span>email</span><br>
-            <input type="text" value="<%=autenticado.email%>" name="email" ><br>
-            <span>Trocar senha</span><br>
-            <input type="password" name="senha"><br>
-            <span>Prencher caso queira trocar a senha</span><br>
-            <span>Numero</span><br>
-            <input type="number" value="<%=autenticado.telefone%>" name="telefone" id=""><br>
-            <span>imagem de perfil</span><br>
+            <span class="cordetd">Apelido</span><br>
+            <input type="text" value="<%=autenticado.autenticado%>" name="user_name" class="redondo"><br>
+            <span class="cordetd">E-mail</span><br>
+            <input type="text" value="<%=autenticado.email%>" name="email" class="redondo"><br>
+            <span class="cordetd">Trocar senha</span><br>
+            <input type="password" name="senha" class="redondo"><br>
+            <span class="cordetd">Adicionar número</span><br>
+            <input type="tel" value="<%=autenticado.telefone%>" name="telefone" id="telefone" class="redondo"><br>
+            <span class="cordetd">imagem de perfil</span><br>
             <input type="file" name="img_perfil" value="<%autenticado.img_perfil%>"><br>
             <img src="<%autenticado.img_perfil%>" alt=""><br>
-            <button>Atualizar</button>
+            <button class="Coratt">Atualizar</button>
         </form>
     </section>
+
+    <footer>
+
+      <div class="rodinha">
+  
+  
+        <nav>
+  
+          <ul>
+            <h3 class="subtitulo-rodape">Atendimento ao cliente</h3>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Central de Ajuda
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Como comprar
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Métodos de Pagamentos
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Garantia
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Devolução e Reembolso
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="#" class="cor-texto-rodape">
+                Fale Conosco
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Ouvidoria
+              </a>
+            </li>
+  
+          </ul>
+  
+        </nav>
+  
+  
+        <nav>
+  
+          <ul>
+            <h3><br>Siga-nos</h3>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Instagram
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Twitter
+              </a>
+            </li>
+  
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Facebook
+              </a>
+            </li>
+  
+          </ul>
+        </nav>
+  
+  
+        <nav>
+  
+  
+          <ul>
+            <h3><br>Sobre a Nix</h3>
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Sobre Nós
+              </a>
+            </li>
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Políticas NIX
+              </a>
+            </li>
+            <li class="lista-rodape">
+              <a href="" class="cor-texto-rodape">
+                Políticas de Privacidade
+              </a>
+            </li>
+          </ul>
+        </nav>
+  
+        <ul>
+          <nav>
+            <h3>Pagamentos</h3>
+  
+            <div class="nini">
+  
+              <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                  <img src="imagens/visa.png">
+                </a>
+              </li>
+  
+              <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                  <img src="imagens/mastercard.png">
+                </a>
+              </li>
+              <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                  <img src="imagens/elo.png">
+              </li>
+              <li class="lista-rodape">
+                <a href="" class="cor-texto-rodape">
+                  <img src="imagens/paypal.png">
+                </a>
+              </li>
+            </div>
+          </nav>
+        </ul>
+      </div>
+      <div class="direito">
+        <p>© 2022 NIXwear.Todos os direitos reservados</p>
+        <p>País e região: Brasil</p>
+      </div>
+  
+    </footer>
+    <script>
+
+      $("#telefone").mask("(99) 99999-99999")
+      
+      </script>
+
 </body>
 </html>

@@ -1,0 +1,203 @@
+@media (max-width: 480px) {
+    section {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #Home {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+    #Header_home {
+        background-color: #3D348B;
+        padding: 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4px;
+
+    }
+
+    #Logo img {
+        height: 30px;
+        width: auto;
+        position: relative;
+        left: -32px;
+    }
+
+    .pesquisa {
+        position: relative;
+    }
+
+    .pesquisa input {
+        border-radius: 20px;
+        padding: 8px 60px 8px 10px;
+        position: relative;
+        border: none;
+        left: 25px;
+    }
+
+    .pesquisa button {
+        position: absolute;
+        top: 53%;
+        right: 4px;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .pesquisa button img {
+        height: 20px;
+        width: auto;
+        left: 25px;
+        position: relative;
+    }
+
+    .menu {
+        position: relative;
+        display: inline-block;
+        left: 90px;
+    }
+
+    #back-button {
+        position: relative;
+        top: 82px;
+        left: -383px;
+        padding: 5px 10px;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+
+    .adm {
+        color: #F1FAEE;
+        left: 65px;
+        position: relative;
+    }
+
+    footer {
+        background-color: #E1ECDD;
+        padding: 20px;
+        margin-top: 20px;
+        position: absolute;
+        left: 0px;
+        top: 685px;
+        width: 91%;
+    }
+
+    .cor-texto-rodape {
+        color: #124559;
+        text-decoration: none;
+    }
+
+    .rodinha {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 400px;
+        justify-content: center;
+    }
+
+    .subtitulo-rodape {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+
+    .lista-rodape {
+        list-style-type: none;
+    }
+
+    .nini {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .direito p {
+        width: 350px;
+        display: grid;
+        justify-content: center;
+        font-weight: bold;
+
+        left: 10%;
+    }
+
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .dest h1 {
+        top: -35px;
+        font-size: 30px;
+        color: #3D348B;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .BoasVindas {
+        position: absolute;
+        color: #3D348B;
+        color: #3D348B;
+        top: 110px;
+        left: 20%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .adc {
+        position: relative;
+        top: 348px;
+        left: -189%;
+        color: #E1ECDD;
+        background-color: #7678ED;
+        border: solid 1px #7678ED;
+        border-radius: 15px;
+        height: 30px;
+    }
+
+    .all-prod {
+        position: relative;
+        top: 380px;
+        left: -190%;
+    }
+
+    .NomeProd {
+        position: relative;
+        top: -143px;
+        left: 7px;
+        color: #3D348B;
+    }
+
+    .DescProd {
+        position: relative;
+        color: #3D348B;
+        top: -23px;
+        left: 20px;
+
+    }
+
+    .Preco {
+        position: relative;
+        left: -2px;
+        top: -17px;
+    }
+
+    .del{
+        position: relative;
+        left: 0px;
+        top: -17px;
+        background-color: #7678ED;
+        color: #F1FAEE;
+        border-radius: 15px;
+        border:solid 1px #7678ED;
+    }
+
+
+
+
+
+
+}

@@ -3,24 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/addproduto.css">
+    <title>Adicionar Produto</title>
 </head>
-<body>
-    <section>
+<body id="Home">
+    <header id="Header_home">
+        <h1 id="Logo">
+            <a href="/"><img src="imagens/nx2 1.png" alt="Logo"></a>
+        </h1>
+
+        <div class="pesquisa">
+            <input type="text" placeholder="Busque aqui.">
+            <button type="button">
+                <img src="imagens/Group 2 (1).png" alt="Psquisa">
+            </button>
+        </div>
+        <button id="back-button" onclick="goBack()"><a href="/configuracao"></a><img src="imagens/Arrow 12.png"
+                alt=""></button>
+        <main>
+
+    <section class="forms">
         <form action="/publicarproduto" method="post" enctype="multipart/form-data">
-            <span>Imagem do produto</span><br>
-            <input type="file" name="img_produto"><br>
-            <span>Nome Do produto</span><br>
-            <input type="text" name="nome_produto"><br>
-            <span>Descrição do Produto</span><br>
-            <input type="text" name="descricao_produto"><br>
-            <span>Preço</span><br>
-            <input type="number" name="preco" id=""><br>
-            <span>Loja</span><br>
-            <input type="text" name="loja" ><br>
+            <span class="cordetd">Imagem do produto</span><br>
+            <input type="file" name="img_produto" class="Publi1"><br>
+            <span class="cordetd">Nome Do produto</span><br>
+            <input type="text" name="nome_produto" class="redondo"><br>
+            <span class="cordetd">Descrição do Produto</span><br>
+            <input type="text" name="descricao_produto" class="redondo1"><br>
+            <span class="cordetd">Preço</span><br>
+            <input type="number" name="preco" id="" class="redondo"><br>
+            <span class="cordetd">Loja</span><br>
+            <input type="text" name="loja" class="redondo"><br>
             
-            <button>Publicar</button>
+            <button class="Publi">Publicar</button>
         </form>
     </section>
+    <footer>
+
+        <div class=" rodinha">
+
+
+                                <nav>
+
+                                    <ul>
+                                        <h3 class="subtitulo-rodape">Atendimento ao cliente</h3>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Central de Ajuda
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Como comprar
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Métodos de Pagamentos
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Garantia
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Devolução e Reembolso
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="#" class="cor-texto-rodape">
+                                                Fale Conosco
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Ouvidoria
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </nav>
+
+
+                                <nav>
+
+                                    <ul>
+                                        <h3><br>Siga-nos</h3>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Instagram
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Twitter
+                                            </a>
+                                        </li>
+
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Facebook
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+
+
+                                <nav>
+
+
+                                    <ul>
+                                        <h3><br>Sobre a Nix</h3>
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Sobre Nós
+                                            </a>
+                                        </li>
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Políticas NIX
+                                            </a>
+                                        </li>
+                                        <li class="lista-rodape">
+                                            <a href="" class="cor-texto-rodape">
+                                                Políticas de Privacidade
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <ul>
+                                    <nav>
+                                        <h3>Pagamentos</h3>
+
+                                        <div class="nini">
+
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/visa.png">
+                                                </a>
+                                            </li>
+
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/mastercard.png">
+                                                </a>
+                                            </li>
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/elo.png">
+                                            </li>
+                                            <li class="lista-rodape">
+                                                <a href="" class="cor-texto-rodape">
+                                                    <img src="imagens/paypal.png">
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </nav>
+                                </ul>
+                        </div>
+                        <div class="direito">
+                            <p>© 2022 NIXwear.Todos os direitos reservados</p>
+                            <p>País e região: Brasil</p>
+                        </div>
+
+                        </footer>
+                        <script src="js/Script.js"></script>
 </body>
+
 </html>

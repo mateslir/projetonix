@@ -5,8 +5,35 @@
     position:absolute;
     font-size:50px;
     margin-left:425px;
-    color:#3b378b
+    color:#3b378b;
+    top: 103px;
+    left: 3px;
+
 }
+
+.bx-envelope{
+    color: #3b378b;
+    font-size: 25px;
+}
+
+.bxl-whatsapp{
+    color: #3b378b;
+    font-size: 25px;
+}
+
+.zap{
+    color: #3b378b;
+    position: relative;
+    top: -5px;
+}
+}
+
+.mail{
+    color: #3b378b;
+    position: relative;
+    top: -5px;
+}
+
 
 .usuari h1{
     text-align: center;
@@ -18,12 +45,28 @@
 }    
 .usuari img{
     position: relative;
-    left:188px;
-    top:12px;
+    left: 168px;
+    top: 12px;
     align-items: center;
-}    
+    border-radius: 100%;
+    height: 155px;
+    border: solid 3px #3D348B;
+}
+
 main {
 }
+
+#back-button {
+    position: relative;
+    top: 77px;
+    left: -435px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
 
 .subvitrine {
     display: flex;
@@ -68,7 +111,7 @@ main {
     
     border-radius: 7px 7px 0 0;
 }
-}
+
 @media (min-width: 481px) and (max-width: 760px) {
 
     .usuari h1{
