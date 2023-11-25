@@ -196,8 +196,10 @@
     }
 
 
-
-
-
+    .imagem{
+        position: relative;
+        width: 103px;
+        height: 123px;
+    }
 
 }
