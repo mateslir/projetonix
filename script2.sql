@@ -11,7 +11,7 @@ email varchar(100) not null,
 senha varchar(60) not null,
 telefone varchar(30),
 foto varchar(150) default 'imagens/Group 9 (1).png',
-tipo_usuario int default '1'
+tipo_usuario int default '2'
 );
 
 DROP TABLE IF EXISTS vender_nix;
