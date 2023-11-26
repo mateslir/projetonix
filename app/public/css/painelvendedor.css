@@ -148,9 +148,9 @@
 
 
     .adc {
-        position: relative;
-        top: 348px;
-        left: -189%;
+        position: absolute;
+        top: 200px;
+        left: 39%;    
         color: #E1ECDD;
         background-color: #7678ED;
         border: solid 1px #7678ED;
@@ -166,29 +166,28 @@
 
     .NomeProd {
         position: relative;
-        top: -143px;
-        left: 7px;
+        top: -189px;
+        left: 26px;
         color: #3D348B;
     }
 
     .DescProd {
         position: relative;
+        top: -28px;
+        left: 19px;
         color: #3D348B;
-        top: -23px;
-        left: 20px;
-
     }
 
     .Preco {
         position: relative;
-        left: -2px;
-        top: -17px;
+    left: 19px;
+    top: -17px;
     }
 
     .del{
         position: relative;
-        left: 0px;
-        top: -17px;
+        left: 29px;
+        top: -18px;
         background-color: #7678ED;
         color: #F1FAEE;
         border-radius: 15px;
@@ -198,8 +197,10 @@
 
     .imagem{
         position: relative;
-        width: 103px;
-        height: 123px;
+        width: 133px;
+        height: 140px;
+        left: 13px;
+        top: -4px;
     }
 
 }

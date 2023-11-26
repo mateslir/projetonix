@@ -96,6 +96,7 @@
         color: #3D348B;
         font-size: 20px;
         position: relative;
+        left: -17px;
     }
 
     .Email{
@@ -116,11 +117,12 @@
         position: relative;
         text-align: center;
         color: #7678ED;
+        left: -17px;
     }
 
     .emailusu{
         position: relative;
-        left: -17px;
+        left: -52px;
         color: #7678ED;
     }
 
@@ -128,7 +130,7 @@
     .delete{
         background-color: #7678ED;
         position: relative;
-        left: 15px;
+        left: -28px;
         border: solid 1px #7678ED;
         border-radius: 15px;
         color: #F1FAEE;
