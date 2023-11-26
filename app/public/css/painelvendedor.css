@@ -150,7 +150,7 @@
     .adc {
         position: absolute;
         top: 200px;
-        left: 39%;    
+        left: 39%;
         color: #E1ECDD;
         background-color: #7678ED;
         border: solid 1px #7678ED;
@@ -160,47 +160,47 @@
 
     .all-prod {
         position: relative;
-        top: 380px;
+        top: 421px;
         left: -190%;
     }
 
     .NomeProd {
         position: relative;
-        top: -189px;
+        top: -156px;
         left: 26px;
         color: #3D348B;
     }
 
     .DescProd {
         position: relative;
-        top: -28px;
+        top: -14px;
         left: 19px;
         color: #3D348B;
     }
 
     .Preco {
         position: relative;
-    left: 19px;
-    top: -17px;
+        left: 19px;
+        top: -10px;
     }
 
-    .del{
+    .del {
         position: relative;
         left: 29px;
-        top: -18px;
+        top: -12px;
         background-color: #7678ED;
         color: #F1FAEE;
         border-radius: 15px;
-        border:solid 1px #7678ED;
+        border: solid 1px #7678ED;
     }
 
 
-    .imagem{
+    .imagem {
         position: relative;
         width: 133px;
         height: 140px;
         left: 13px;
-        top: -4px;
+        top: 10px;
     }
 
 }

@@ -555,7 +555,7 @@ router.get("/addproduto", function (req, res) {
         if (error) throw error;
       }
     );
-    res.redirect("/");
+    res.redirect("/painelvendedor");
   });
   
   
